@@ -18,7 +18,7 @@
       <button class="page-header__nav-toggle page-header__nav-toggle--open" type="button">Открыть|Закрыть меню
         сайта</button>
     </div>
-    <nav class="main-nav visually-hidden">
+    <nav class="main-nav">
       <ul class="menu-list main-nav__menu-list">
         <li><a class="menu-list__item" href="index.html">Главная</a></li>
         <li><a class="menu-list__item" href="catalog.html">Каталог продукции</a></li>
@@ -29,7 +29,50 @@
 
   <main class="page-main">
     <h1 class="page-main__title">Подбор программы</h1>
+    <p class="page-main__text">
+      Заполните анкету и мы подберем программу питания для вашего кота
+    </p>
+    <form class="params page-main__params" action="https://echo.htmlacademy.ru" method="POST">
+      <fieldset class="params__fieldset">
+        <label class="params__label">Имя:*<input class="paramas_text-field" type="text" name="nikname" placeholder="Барсик"></label>
+        <label class="params__label">Вес (кг):*<input class="paramas_number-field" type="number" name="weight" placeholder="7"></label>
+        <label class="params__label">Возраст (лет):<input class="paramas_number-field" type="number" name="age" placeholder="7"></label>
+      </fieldset>
+      <fieldset class="params__fieldset">
+        <label class="params__label"><input class="params__radio-btn" type="radio" name="target">Похудение</label>
+        <label class="params__label"><input class="params__radio-btn" type="radio" name="target">Набор массы</label>
+        <label class="params__label"><input class="params__radio-btn" type="radio" name="target">Не знаю (нужен ваш совет)</label>
+      </fieldset>
+      <fieldset class="params__fieldset">
+        <legend class="params__legend">Контактные данные (владельца кота)</legend>
+        <label class="params__label">e-mail:*<input class="params__email-field" type="email" name="email" placeholder="kuklachev@gmail.com"></label>
+        <label class="params__label">Телефон:*<input class="params__phone-field" type="text" name="phone" placeholder="8 (960) 900-60-90"></label>
+      </fieldset>
+      <fieldset class="params__fieldset">
+        <legend class="params__legend">Комментарий</legend>
+        <label class="params__label"><textarea class="params__textarea-field" name="comments" cols="30" rows="10"
+            placeholder="Расскажите обо всех повадках кота"></textarea></label>
+      </fieldset>
+      <fieldset class="params__fieldset">
+        <legend class="params__legend">Дополнительно</legend>
+        <label class="params__label"><input class="params__checkbox" type="checkbox" name="extra-choice-1">Сахарозаменитель</label>
+        <label class="params__label"><input class="params__checkbox" type="checkbox" name="extra-choice-2">Питьевая вода</label>
+        <label class="params__label"><input class="params__checkbox" type="checkbox" name="extra-choice-3">Молоко</label>
+        <label class="params__label"><input class="params__checkbox" type="checkbox" name="extra-choice-4">Витамины</label>
+      </fieldset>
+      <button class="common-btn params__submit-btn" type="submit">Отправить заявку</button>
+      <small class="params__text-small">* - Обязательные поля</small>
+    </form>
   </main>
+
+  <aside class="contacts">
+    <h2 class="visually-hidden">Контакты</h2>
+    <div class="contacts__wrapper">
+      <b class="contacts__prompt">Приглашаем к сотрудничеству дилеров!</b>
+      <p class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+    </div>
+    <img class="contacts__map" src="https://via.placeholder.com/320x362" width="320" height="362" alt="Карта">
+  </aside>
 
   <footer class="page-footer">
     <div class="page-footer__wrapper">
