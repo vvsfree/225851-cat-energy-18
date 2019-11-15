@@ -4,19 +4,18 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Кэт энерджи</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
   <header class="page-header">
-    <div class="page-header__wrapper">
+    <div class="wrapper page-header__wrapper">
       <a class="page-header__logo">
-        <img class="page-header__logo-image" src="https://via.placeholder.com/33x38" width="33" height="38"
-          alt="Логотип Cat Energy">
-        <img class="page-header__title-image" src="https://via.placeholder.com/101x18" width="101" height="18"
-          alt="Название Cat Energy">
+        <img class="page-header__logo-image" src="img/logo-mobile.svg" width="190" height="38" alt="Логотип Cat Energy">
       </a>
-      <button class="page-header__nav-toggle page-header__nav-toggle--open" type="button">Открыть|Закрыть меню
-        сайта</button>
+      <button class="page-header__nav-toggle page-header__nav-toggle--open" type="button">
+        Открыть|Закрыть меню сайта
+      </button>
     </div>
     <nav class="main-nav">
       <ul class="menu-list main-nav__menu-list">
@@ -29,40 +28,42 @@
 
   <main class="page-main">
     <h1 class="visually-hidden">Cat Energy</h1>
-    <section class="promo">
-      <div class="promo__wrapper">
-        <h2 class="promo__title">Функциональное питание для котов</h2>
-        <b class="promo__motto">Занялся собой? Займись котом!</b>
-        <img class="promo__img" src="https://via.placeholder.com/280x270" width="280" height="270"
+    <section class="promo page-main__promo">
+      <header class="promo__header">
+        <div class="wrapper">
+          <h2 class="promo__title">Функциональное питание для котов</h2>
+          <b class="promo__slogan">Занялся собой? Займись котом!</b>
+        </div>
+      </header>
+      <div class="wrapper">
+        <img class="promo__img" src="img/index-can-mobile@1x.png" width="280" height="271"
           alt="Баночка кошачьего корма">
-        <a class="common-btn promo__btn" href="#">Подобрать программу</a>
+        <a class="btn promo__btn" href="#">Подобрать программу</a>
       </div>
     </section>
-    <section class="categories">
-      <div class="categories__wrapper">
-        <h2 class="visually-hidden">Категории товаров</h2>
-        <ul class="categories__list">
-          <li class="category categories__category">
-            <h3 class="category__title">Похудение</h3>
-            <p class="category__description">
-              Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim
-              поможет вашему питомцу сбросить лишний вес.
-            </p>
-            <a class="category__btn" href="#">Каталог slim</a>
-          </li>
-          <li class="category categories__category">
-            <h3 class="category__title">Набор массы</h3>
-            <p class="category__description">
-              Заработать авторитет среди дворовых котов и даже собак?
-              Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!
-            </p>
-            <a class="category__btn" href="#">Каталог pro</a>
-          </li>
-        </ul>
+    <section class="categories page-main__categories">
+      <h2 class="visually-hidden">Категории товаров</h2>
+      <div class="wrapper">
+        <article class="category categories__item">
+          <h3 class="category__title">Похудение</h3>
+          <p class="category__description">
+            Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim
+            поможет вашему питомцу сбросить лишний вес.
+          </p>
+          <a class="category__btn" href="#">Каталог slim</a>
+        </article>
+        <article class="category categories__item">
+          <h3 class="category__title">Набор массы</h3>
+          <p class="category__description">
+            Заработать авторитет среди дворовых котов и даже собак?
+            Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!
+          </p>
+          <a class="category__btn" href="#">Каталог pro</a>
+        </article>
       </div>
     </section>
-    <section class="advantages">
-      <div class="advantages__wrapper">
+    <section class="advantages page-main__advantages">
+      <div class="wrapper">
         <h2 class="advantages__title">Как это работает</h2>
         <ul class="advantages__list">
           <li class="advantages__item advantages__item--compound">Функциональное питание содержит только полезные
@@ -77,51 +78,55 @@
       </div>
     </section>
     <section class="example">
-      <h2 class="example__title">Живой пример</h2>
-      <p class="example__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без
-        изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день. </p>
-      <dl class="stats example__stats">
-        <dt class="stats__value">5 кг</dt>
-        <dd class="stats__desc">Снижение веса</dd>
-        <dt class="stats__value">60 дней</dt>
-        <dd class="stats__desc">Затрачено времени</dd>
-      </dl>
-      <b class="example__cost">Затраты на питание: 15 000 руб.</b>
-      <div class="slider example__slider">
-        <figure class="slider__before">
-          <img class="slider__image" src="https://via.placeholder.com/311x232" width="311" height="232" alt="Кот до приема корма">
-          <figcaption class="slider__caption">Было</figcaption>
-        </figure>
-        <figure class="slider__after">
-          <img class="slider__image" src="https://via.placeholder.com/251x240" width="251" height="240" alt="Кот после приема корма">
-          <figcaption class="slider__caption">Стало</figcaption>
-        </figure>
+      <div class="wrapper">
+        <h2 class="example__title">Живой пример</h2>
+        <p class="example__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim.
+          Отличный результат без
+          изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день. </p>
+        <dl class="stats example__stats">
+          <dt class="stats__value">5 кг</dt>
+          <dd class="stats__desc">Снижение веса</dd>
+          <dt class="stats__value">60 дней</dt>
+          <dd class="stats__desc">Затрачено времени</dd>
+        </dl>
+        <b class="example__cost">Затраты на питание: 15 000 руб.</b>
+        <div class="slider example__slider">
+          <figure class="slider__before">
+            <img class="slider__image" src="https://via.placeholder.com/311x232" width="311" height="232"
+              alt="Кот до приема корма">
+            <figcaption class="slider__caption">Было</figcaption>
+          </figure>
+          <figure class="slider__after">
+            <img class="slider__image" src="https://via.placeholder.com/251x240" width="251" height="240"
+              alt="Кот после приема корма">
+            <figcaption class="slider__caption">Стало</figcaption>
+          </figure>
+        </div>
       </div>
     </section>
-
+    <section class="contacts">
+      <h2 class="visually-hidden">Контакты</h2>
+      <div class="wrapper">
+        <b class="contacts__prompt">Приглашаем к сотрудничеству дилеров!</b>
+        <p class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+        <img class="contacts__map" src="https://via.placeholder.com/320x362" width="320" height="362" alt="Карта">
+      </div>
+    </section>
   </main>
 
-  <aside class="contacts">
-    <h2 class="visually-hidden">Контакты</h2>
-    <div class="contacts__wrapper">
-      <b class="contacts__prompt">Приглашаем к сотрудничеству дилеров!</b>
-      <p class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
-    </div>
-    <img class="contacts__map" src="https://via.placeholder.com/320x362" width="320" height="362" alt="Карта">
-  </aside>
-
   <footer class="page-footer">
-    <div class="page-footer__wrapper">
-      <a class="page-footer__logo">
-        <img class="page-footer__title-image" src="https://via.placeholder.com/128x24" width="128" height="24"
-          alt="Название Cat Energy">
-      </a>
+    <div class="wrapper">
+      <div class="text-logo">
+        <a class="text-logo__link">
+          <img class="text-logo__image" src="img/logo-footer.svg" width="128" height="24" alt="Название Cat Energy">
+        </a>
+      </div>
       <ul class="social page-footer__social">
         <li class="social__item"><a class="social__link social__link--vk" href="#">Вконтакте</a></li>
         <li class="social__item"><a class="social__link social__link--insta" href="#">Инстраграм</a></li>
         <li class="social__item"><a class="social__link social__link--fb" href="#">Фэйсбук</a></li>
       </ul>
-      <address class="copyright page-footer__copyright">
+      <address class="copyright">
         <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
       </address>
     </div>
