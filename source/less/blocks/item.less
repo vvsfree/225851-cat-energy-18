@@ -4,8 +4,21 @@
   border: 1px solid #ededed;
 }
 
+.item__wrapper {
+  margin: 0 auto;
+  width: @mobile-wrapper-width;
+}
+
 .item__title {
   .font-secondary(16px, 20px, #111111);
+}
+
+.item__text {
+  font-family: @fontPrimary;
+  font-size: 12px;
+  line-height: 16px;
+  color: #444444;
+  text-align: center;
 }
 
 .item__image {
@@ -28,4 +41,23 @@
   line-height: 16px;
   color: #444444;
   text-align: right;
+}
+
+@media (min-width: @tablet-width) {
+  .item {
+    padding: 0;
+    width: 324px;
+    border: 0;
+  }
+
+  .item__wrapper {
+    margin: 0;
+    width: auto;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .item {
+    width: 245px;
+  }
 }

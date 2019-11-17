@@ -1,3 +1,31 @@
+.catalog__wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
 .catalog__item {
   border-bottom: none;
+}
+
+@media (min-width: @tablet-width) {
+  .catalog__wrapper {
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    width: @tablet-wrapper-width;
+  }
+
+  .catalog__item:not(:nth-child(2n+1)) {
+    margin-left: 60px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .catalog__wrapper {
+    width: @desktop-wrapper-width;
+  }
+
+  .catalog__item:not(:nth-child(4n+1)) {
+    margin-left: 80px;
+  }
 }
