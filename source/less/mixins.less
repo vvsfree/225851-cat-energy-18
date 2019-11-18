@@ -1,4 +1,7 @@
-.font-secondary() {
+.font-secondary(@size, @height, @color, @weigth: 400) {
   font-family: @fontSecondary;
-  font-weight: 400;
+  font-size: @size;
+  line-height: @height;
+  color: @color;
+  font-weight: @weigth;
 }
