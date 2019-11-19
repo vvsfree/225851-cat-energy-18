@@ -1,16 +1,155 @@
 .slider {
-  padding-bottom: 39px;
+  font-size: 0;
 }
 
-.slider__before {
-  margin: 0;
+.slider__wrapper {
+  position: relative;
+  margin: 0 auto;
+  min-height: 328px;
+  width: @mobile-width;
 }
 
-.slider__after {
-  margin: 0;
+.slider__slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
 }
 
-.slider__caption {
+.slider__slide--before {
+  z-index: 20;
+  background: #f2f2f2 url("../../img/before-mobile@1x.png") left top no-repeat;
+
+  // outline: 1px solid green;
+  // outline-offset: -1px;
+}
+
+.slider__slide--after {
+  z-index: 10;
+  background: #eaeaea url("../../img/after-mobile@1x.png") left top no-repeat;
+
+  // outline: 1px solid blue;
+  // outline-offset: -1px;
+}
+
+.slider__controls {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding-top: 36px;
+  padding-bottom: 38px;
+}
+
+.slider__control {
+  width: 80px;
   .font-secondary(16px, 20px, #111111);
   text-transform: uppercase;
+
+  &--left {
+    text-align: right;
+  }
+
+  &--right {
+    text-align: left;
+  }
+}
+
+@media (min-width: @mobile-width) {
+  // todo: нужно это все в таблеточную версию перенести
+  // если же еще в мобильной, то там просто один слайдер показывается и все
+}
+
+@media (min-width: @tablet-width) {
+  .slider {
+    display: flex;
+    justify-content: center;
+    align-items: top;
+
+    &::before {
+      content: '';
+      flex-grow: 1;
+      width: 1px;
+      background-color: #f2f2f2;
+
+      // outline: 1px solid black;
+      // outline-offset: -2px;
+    }
+
+    &::after {
+      content: '';
+      flex-grow: 1;
+      width: 1px;
+      background-color: #eaeaea;
+
+      // outline: 1px solid black;
+      // outline-offset: -2px;
+    }
+  }
+
+  .slider__wrapper {
+    position: relative;
+    padding: 0 9px;
+    margin: 0;
+    width: @tablet-width;
+    min-height: 630px;
+    box-sizing: border-box;
+  }
+
+  .slider__slide--before {
+    width: @tablet-width / 2;
+    background: #f2f2f2 url("../../img/before-tablet@1x.png") 45px top no-repeat;
+  }
+
+  .slider__slide--after {
+    background: #eaeaea url("../../img/after-tablet@1x.png") 45px top no-repeat;
+  }
+
+  .slider__controls {
+    padding-top: 12px;
+    padding-bottom: 66px;
+  }
+
+  .slider__control {
+    width: 132px;
+    font-size: 20px;
+    line-height: 1;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .slider__before > .slider__image {
+    content: url("../../img/before-desktop@1x.png");
+  }
+
+  .slider__after > .slider__image {
+    content: url("../../img/after-desktop@1x.png");
+  }
+
+  .slider__image {
+    width: 690px;
+    height: 517px;
+  }
+
+  .slider__controls {
+    padding-top: 32px;
+    padding-bottom: 0;
+  }
+
+  .slider__controls {
+    margin: 0;
+    margin-left: auto;
+    width: 570px;
+  }
+
+  .slider__control {
+    width: 93px;
+  }
 }
