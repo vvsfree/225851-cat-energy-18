@@ -5,8 +5,8 @@
 .slider__wrapper {
   position: relative;
   margin: 0 auto;
-  min-height: 328px;
   width: @mobile-width;
+  min-height: 328px;
 }
 
 .slider__slide {
@@ -62,54 +62,29 @@
   }
 }
 
-@media (min-width: @mobile-width) {
-  // todo: нужно это все в таблеточную версию перенести
-  // если же еще в мобильной, то там просто один слайдер показывается и все
-}
-
 @media (min-width: @tablet-width) {
   .slider {
-    display: flex;
-    justify-content: center;
-    align-items: top;
-
-    &::before {
-      content: '';
-      flex-grow: 1;
-      width: 1px;
-      background-color: #f2f2f2;
-
-      // outline: 1px solid black;
-      // outline-offset: -2px;
-    }
-
-    &::after {
-      content: '';
-      flex-grow: 1;
-      width: 1px;
-      background-color: #eaeaea;
-
-      // outline: 1px solid black;
-      // outline-offset: -2px;
-    }
+    background:
+      linear-gradient(to bottom, #ffffff @slider-gradient-border, transparent @slider-gradient-border),
+      linear-gradient(to right, #f2f2f2 50%, #eaeaea 50%);
   }
 
   .slider__wrapper {
-    position: relative;
-    padding: 0 9px;
-    margin: 0;
-    width: @tablet-width;
+    width: @tablet-wrapper-width;
     min-height: 630px;
-    box-sizing: border-box;
   }
 
   .slider__slide--before {
-    width: @tablet-width / 2;
-    background: #f2f2f2 url("../../img/before-tablet@1x.png") 45px top no-repeat;
+    width: @tablet-wrapper-width / 2;
+    background:
+      url("../../img/before-tablet@1x.png") 15px top no-repeat,
+      linear-gradient(to bottom, #ffffff @slider-gradient-border, #f2f2f2 @slider-gradient-border);
   }
 
   .slider__slide--after {
-    background: #eaeaea url("../../img/after-tablet@1x.png") 45px top no-repeat;
+    background:
+      url("../../img/after-tablet@1x.png") 15px top no-repeat,
+      linear-gradient(to bottom, #ffffff @slider-gradient-border, #eaeaea @slider-gradient-border);
   }
 
   .slider__controls {
@@ -125,31 +100,17 @@
 }
 
 @media (min-width: @desktop-width) {
-  .slider__before > .slider__image {
-    content: url("../../img/before-desktop@1x.png");
+  .slider {
+    min-height: 675px;
   }
 
-  .slider__after > .slider__image {
-    content: url("../../img/after-desktop@1x.png");
-  }
-
-  .slider__image {
-    width: 690px;
-    height: 517px;
-  }
-
-  .slider__controls {
-    padding-top: 32px;
-    padding-bottom: 0;
-  }
-
-  .slider__controls {
+  .slider__wrapper {
     margin: 0;
-    margin-left: auto;
-    width: 570px;
+    width: 100%;
+    height: 100%;
   }
 
-  .slider__control {
-    width: 93px;
+  .slider__slide--before {
+    width: 345;
   }
 }

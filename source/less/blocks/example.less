@@ -47,14 +47,17 @@
 @media (min-width: @desktop-width) {
   .example {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    padding-bottom: 75px;
+    justify-content: center;
+    align-items: stretch;
+    background:
+    linear-gradient(to bottom, #ffffff @slider-gradient-border, transparent @slider-gradient-border),
+    linear-gradient(to right, #f2f2f2 50%, #eaeaea 50%);
   }
 
   .example__wrapper {
-    width: 440px;
-    align-self: flex-end;
+    margin: 0;
+    width: 570px;
+
     outline: 1px solid green;
   }
 
@@ -67,13 +70,13 @@
 
   .example__text {
     margin-bottom: 66px;
+    width: 440px;
   }
 
   .example__slider {
     margin-top: 0;
     width: 650px;
 
-    align-self: flex-end;
     outline: 1px solid green;
   }
 }
