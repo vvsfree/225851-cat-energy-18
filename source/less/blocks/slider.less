@@ -1,16 +1,116 @@
 .slider {
-  padding-bottom: 39px;
+  font-size: 0;
 }
 
-.slider__before {
-  margin: 0;
+.slider__wrapper {
+  position: relative;
+  margin: 0 auto;
+  width: @mobile-width;
+  min-height: 328px;
 }
 
-.slider__after {
-  margin: 0;
+.slider__slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
 }
 
-.slider__caption {
+.slider__slide--before {
+  z-index: 20;
+  background: #f2f2f2 url("../../img/before-mobile@1x.png") left top no-repeat;
+
+  // outline: 1px solid green;
+  // outline-offset: -1px;
+}
+
+.slider__slide--after {
+  z-index: 10;
+  background: #eaeaea url("../../img/after-mobile@1x.png") left top no-repeat;
+
+  // outline: 1px solid blue;
+  // outline-offset: -1px;
+}
+
+.slider__controls {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding-top: 36px;
+  padding-bottom: 38px;
+}
+
+.slider__control {
+  width: 80px;
   .font-secondary(16px, 20px, #111111);
   text-transform: uppercase;
+
+  &--left {
+    text-align: right;
+  }
+
+  &--right {
+    text-align: left;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .slider {
+    background:
+      linear-gradient(to bottom, #ffffff @slider-gradient-border, transparent @slider-gradient-border),
+      linear-gradient(to right, #f2f2f2 50%, #eaeaea 50%);
+  }
+
+  .slider__wrapper {
+    width: @tablet-wrapper-width;
+    min-height: 630px;
+  }
+
+  .slider__slide--before {
+    width: @tablet-wrapper-width / 2;
+    background:
+      url("../../img/before-tablet@1x.png") 15px top no-repeat,
+      linear-gradient(to bottom, #ffffff @slider-gradient-border, #f2f2f2 @slider-gradient-border);
+  }
+
+  .slider__slide--after {
+    background:
+      url("../../img/after-tablet@1x.png") 15px top no-repeat,
+      linear-gradient(to bottom, #ffffff @slider-gradient-border, #eaeaea @slider-gradient-border);
+  }
+
+  .slider__controls {
+    padding-top: 12px;
+    padding-bottom: 66px;
+  }
+
+  .slider__control {
+    width: 132px;
+    font-size: 20px;
+    line-height: 1;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .slider {
+    min-height: 675px;
+  }
+
+  .slider__wrapper {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .slider__slide--before {
+    width: 345px;
+  }
 }

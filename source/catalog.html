@@ -27,9 +27,7 @@
   </header>
 
   <main class="page-main">
-    <div class="wrapper">
-      <h1 class="page-main__title">Каталог продукции</h1>
-    </div>
+    <h1 class="wrapper page-main__title">Каталог продукции</h1>
     <section class="catalog page-main__catalog">
       <h2 class="visually-hidden">Основной каталог</h2>
       <div class="catalog__wrapper">
@@ -199,51 +197,55 @@
     <section class="extra-catalog page-main__extra-catalog">
       <div class="wrapper">
         <h2 class="extra-catalog__title">Дополнительные товары</h2>
-        <article class="extra-item extra-catalog__item">
-          <h3 class="extra-item__title">Сахарозаменитель</h3>
-          <dl class="extra-item__price-tag">
-            <dt class="extra-item__amount">1 упаковка (100г)</dt>
-            <dd class="extra-item__price">200 Р.</dd>
-          </dl>
-          <a class="btn extra-item__order-btn" href="#">Заказать</a>
-        </article>
-        <article class="extra-item extra-catalog__item">
-          <h3 class="extra-item__title">Питьевая вода</h3>
-          <dl class="extra-item__price-tag">
-            <dt class="extra-item__amount">5 литров</dt>
-            <dd class="extra-item__price">50 Р.</dd>
-          </dl>
-          <a class="btn extra-item__order-btn" href="#">Заказать</a>
-        </article>
-        <article class="extra-item extra-catalog__item">
-          <h3 class="extra-item__title">Молоко</h3>
-          <dl class="extra-item__price-tag">
-            <dt class="extra-item__amount">1 литр</dt>
-            <dd class="extra-item__price">100 Р.</dd>
-          </dl>
-          <a class="btn extra-item__order-btn" href="#">Заказать</a>
-        </article>
-        <article class="extra-item extra-catalog__item">
-          <h3 class="extra-item__title">Витамины</h3>
-          <dl class="extra-item__price-tag">
-            <dt class="extra-item__amount">1 упаковка (30г)</dt>
-            <dd class="extra-item__price">300 Р.</dd>
-          </dl>
-          <a class="btn extra-item__order-btn" href="#">Заказать</a>
-        </article>
-        <aside class="proposal">
+      </div>
+      <div class="wrapper extra-catalog__wrapper">
+        <div class="extra-catalog__items">
+          <article class="extra-item extra-catalog__item">
+            <h3 class="extra-item__title">Сахарозаменитель</h3>
+            <dl class="extra-item__price-tag">
+              <dt class="extra-item__amount">1 упаковка (100г)</dt>
+              <dd class="extra-item__price">200 Р.</dd>
+            </dl>
+            <a class="btn extra-item__order-btn" href="#">Заказать</a>
+          </article>
+          <article class="extra-item extra-catalog__item">
+            <h3 class="extra-item__title">Питьевая вода</h3>
+            <dl class="extra-item__price-tag">
+              <dt class="extra-item__amount">5 литров</dt>
+              <dd class="extra-item__price">50 Р.</dd>
+            </dl>
+            <a class="btn extra-item__order-btn" href="#">Заказать</a>
+          </article>
+          <article class="extra-item extra-catalog__item">
+            <h3 class="extra-item__title">Молоко</h3>
+            <dl class="extra-item__price-tag">
+              <dt class="extra-item__amount">1 литр</dt>
+              <dd class="extra-item__price">100 Р.</dd>
+            </dl>
+            <a class="btn extra-item__order-btn" href="#">Заказать</a>
+          </article>
+          <article class="extra-item extra-catalog__item">
+            <h3 class="extra-item__title">Витамины</h3>
+            <dl class="extra-item__price-tag">
+              <dt class="extra-item__amount">1 упаковка (30г)</dt>
+              <dd class="extra-item__price">300 Р.</dd>
+            </dl>
+            <a class="btn extra-item__order-btn" href="#">Заказать</a>
+          </article>
+        </div>
+        <aside class="proposal extra-catalog__proposal">
           <img class="proposal__image" src="img/icon-gift.svg" width="55" height="60" alt="Иконка подарка">
           <p class="proposal__text">Закажите все<br>и получите чехол для кота в подарок!</p>
         </aside>
       </div>
     </section>
-    <section class="contacts">
+    <section class="contacts contacts--grey">
       <h2 class="visually-hidden">Контакты</h2>
-      <div class="wrapper contacts__wrapper contacts__wrapper--grey">
+      <div class="wrapper contacts__wrapper">
         <b class="contacts__prompt">Приглашаем к сотрудничеству дилеров!</b>
         <p class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
       </div>
-      <img class="contacts__map" src="img/bg-map-mobile@1x.png" width="320" height="362" alt="Карта">
+      <div class="contacts__map"></div>
     </section>
   </main>
 
