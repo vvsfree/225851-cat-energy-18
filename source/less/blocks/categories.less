@@ -1,7 +1,30 @@
+.categories__wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
 .categories__item {
   margin-bottom: 20px;
 
   &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .categories__item {
+    margin-bottom: 30px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .categories__wrapper {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .categories__item {
     margin-bottom: 0;
   }
 }
