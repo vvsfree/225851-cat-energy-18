@@ -9,7 +9,7 @@
 
 <body>
   <header class="page-header">
-    <div class="page-header__wrapper">
+    <div class="wrapper page-header__wrapper">
       <a class="page-header__logo" href="index.html">
         <img class="page-header__logo-image" src="img/logo-mobile.svg" width="190" height="38" alt="Логотип Cat Energy">
       </a>
@@ -30,66 +30,67 @@
     <h1 class="wrapper page-main__title">Подбор программы</h1>
     <section class="page-main__diet-program">
       <h2 class="visually-hidden">Форма подбора программы по параметрам</h2>
-      <!-- <p class="wrapper diet-program__text">
-        Заполните анкету и мы подберем<br>программу питания для вашего кота
-      </p> -->
       <form class="form" action="https://echo.htmlacademy.ru" method="POST">
-        <p class="form__wrapper form__text">
+        <p class="wrapper form__text">
           Заполните анкету и мы подберем<br>программу питания для вашего кота
         </p>
-        <div class="form__fieldset">
-          <div class="form__inner-fieldset">
-            <div class="form__wrapper">
-              <label class="form__label">Имя:*<input class="form__text-field" type="text" name="nickname"
-                  placeholder="Барсик"></label>
-              <label class="form__label">Вес (кг):*<input class="form__number-field" type="number" name="weight"
-                  placeholder="7"></label>
-              <label class="form__label">Возраст (лет):<input class="form__number-field" type="number" name="age"
-                  placeholder="7"></label>
-            </div>
-          </div>
-          <div class="form__inner-fieldset form__inner-fieldset--bordered">
-            <div class="form__wrapper">
-              <label class="form__label"><input class="form__radio-btn" type="radio" name="target">Похудение</label>
-              <label class="form__label"><input class="form__radio-btn" type="radio" name="target">Набор массы</label>
-              <label class="form__label"><input class="form__radio-btn" type="radio" name="target">Не знаю (нужен ваш
-                совет)</label>
-            </div>
+        <div class="fieldset-identity form__fieldset-identity">
+          <div class="wrapper">
+            <label class="form__label fieldset-identity__name">Имя:*<input
+                class="form__text-field fieldset-identity__name-field" type="text" name="nickname" placeholder="Барсик">
+            </label>
+            <label class="form__label fieldset-identity__weight">Вес (кг):*<input
+                class="form__number-field fieldset-identity__weight-field" type="number" name="weight" placeholder="7">
+            </label>
+            <label class="form__label fieldset-identity__age">Возраст (лет):<input
+                class="form__number-field fieldset-identity__age-field" type="number" name="age" placeholder="7">
+            </label>
           </div>
         </div>
-        <div class="form__fieldset">
-          <div class="form__wrapper">
-            <h3 class="form__legend">Контактные данные (владельца кота)</h3>
-            <label class="form__label">e-mail:*<input class="form__email-field" type="email" name="email"
-                placeholder="kuklachev@gmail.com"></label>
-            <label class="form__label">Телефон:*<input class="form__phone-field" type="text" name="phone"
-                placeholder="8 (960) 900-60-90"></label>
+        <div class="fieldset-goal form__fieldset-goal">
+          <div class="wrapper">
+            <label class="form__label fieldset-goal__label"><input class="fieldset-goal__radio-btn" type="radio"
+                name="target">Похудение</label>
+            <label class="form__label fieldset-goal__label"><input class="fieldset-goal__radio-btn" type="radio"
+                name="target">Набор массы</label>
+            <label class="form__label fieldset-goal__label"><input class="fieldset-goal__radio-btn" type="radio"
+                name="target">Не знаю (нужен ваш
+              совет)</label>
           </div>
         </div>
-        <div class="form__fieldset form__fieldset--comment">
-          <div class="form__wrapper">
-            <h3 class="form__legend">Комментарий</h3>
-            <label class="form__label"><textarea class="form__textarea-field" name="comments" cols="30" rows="10"
+        <div class="fieldset-contacts form__fieldset-contacts">
+          <div class="wrapper">
+            <h3 class="form__legend fieldset-contacts__legend">Контактные данные (владельца кота)</h3>
+            <label class="form__label fieldset-contacts__email">e-mail:*<input class="form__email-field fieldset-contacts__email-field"
+                type="email" name="email" placeholder="kuklachev@gmail.com"></label>
+            <label class="form__label">Телефон:*<input class="form__phone-field fieldset-contacts__phone-field"
+                type="text" name="phone" placeholder="8 (960) 900-60-90"></label>
+          </div>
+        </div>
+        <div class="fieldset-comment form__fieldset-comment">
+          <div class="wrapper">
+            <h3 class="form__legend fieldset-comment__legend">Комментарий</h3>
+            <label class="form__label"><textarea class="form__text-field fieldset-comment__text-field" name="comments" cols="30" rows="10"
                 placeholder="Расскажите обо всех повадках кота"></textarea></label>
           </div>
         </div>
-        <div class="form__fieldset form__fieldset--extra">
-          <div class="form__wrapper">
-            <h3 class="form__legend">Дополнительно</h3>
-            <label class="form__label"><input class="form__checkbox" type="checkbox"
+        <div class="fieldset-extra form__fieldset-extra">
+          <div class="wrapper">
+            <h3 class="form__legend fieldset-extra__legend">Дополнительно</h3>
+            <label class="form__label fieldset-extra__label"><input class="form__checkbox fieldset-extra__checkbox" type="checkbox"
                 name="extra-choice-1">Сахарозаменитель</label>
-            <label class="form__label"><input class="form__checkbox" type="checkbox" name="extra-choice-2">Питьевая
+            <label class="form__label fieldset-extra__label"><input class="form__checkbox fieldset-extra__checkbox" type="checkbox" name="extra-choice-2">Питьевая
               вода</label>
-            <label class="form__label"><input class="form__checkbox" type="checkbox"
+            <label class="form__label fieldset-extra__label"><input class="form__checkbox fieldset-extra__checkbox" type="checkbox"
                 name="extra-choice-3">Молоко</label>
-            <label class="form__label"><input class="form__checkbox" type="checkbox"
+            <label class="form__label fieldset-extra__label"><input class="form__checkbox fieldset-extra__checkbox" type="checkbox"
                 name="extra-choice-4">Витамины</label>
           </div>
         </div>
-        <div class="form__fieldset form__fieldset--send">
-          <div class="form__wrapper">
-            <button class="btn form__submit-btn" type="submit">Отправить заявку</button>
-            <small class="form__text-small">* - Обязательные поля</small>
+        <div class="fieldset-send form__fieldset-send">
+          <div class="wrapper">
+            <button class="btn btn--larger form__submit-btn fieldset-send__btn" type="submit">Отправить заявку</button>
+            <small class="form__text-small">* — Обязательные поля</small>
           </div>
         </div>
       </form>
