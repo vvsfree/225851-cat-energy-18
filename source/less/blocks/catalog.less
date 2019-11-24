@@ -11,8 +11,17 @@
   .catalog__wrapper {
     flex-direction: row;
     flex-wrap: wrap;
+    align-items: flex-start;
     margin: 0 auto;
     width: @tablet-wrapper-width;
+  }
+
+  .catalog__item {
+    margin-bottom: 58px;
+
+    &:not(:first-child) {
+      margin-top: 0;
+    }
   }
 
   .catalog__item:not(:nth-child(2n+1)) {

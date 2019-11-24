@@ -27,10 +27,10 @@
   .extra-item {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: baseline;
     align-content: space-between;
     flex-wrap: wrap;
-    padding-left: 36px;
+    padding-left: 38px;
     padding-right: 36px;
     padding-top: 26px;
     padding-bottom: 26px;
@@ -46,14 +46,22 @@
   }
 
   .extra-item__price-tag {
+    justify-content: flex-end;
     margin-bottom: 0;
     width: 60%;
     font-size: 16px;
     line-height: 20px;
+    text-align: right;
+  }
+
+  .extra-item__price {
+    margin: 0;
+    padding-left: 5px;
+    width: 90px;
   }
 
   .extra-item__order-btn {
-    margin-top: 26px;
+    margin-top: 22px;
     width: 100%;
   }
 }
