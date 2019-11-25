@@ -1,27 +1,12 @@
+.form__wrapper {
+  margin: 0 auto;
+  width: @mobile-wrapper-width;
+}
+
 .form__text {
   margin-bottom: 39px;
   .font-secondary(14px, 18px, #111111);
   text-transform: uppercase;
-}
-
-.form__fieldset-identity {
-  margin-bottom: 23px;
-}
-
-.form__fieldset-goal {
-  margin-bottom: 28px;
-}
-
-.form__fieldset-contacts {
-  margin-bottom: 28px;
-}
-
-.form__fieldset-comment {
-  margin-bottom: 28px;
-}
-
-.form__fieldset-extra {
-  margin-bottom: 36px;
 }
 
 .form__submit-btn {
@@ -49,12 +34,10 @@
   text-transform: uppercase;
 }
 
-//////////////////////////////////////////////////////////////////////////
 .form__text-field,
 .form__number-field,
 .form__email-field,
-.form__phone-field,
-.form__text-field {
+.form__phone-field {
   flex-grow: 1;
   padding: 0;
   padding-bottom: 2px;
@@ -64,6 +47,26 @@
   .font-secondary(16px, 18px, #444444);
   text-transform: uppercase;
   border: 1px solid #e6e6e6;
+}
+
+.form__fieldset-identity {
+  margin-bottom: 23px;
+}
+
+.form__fieldset-goal {
+  margin-bottom: 28px;
+}
+
+.form__fieldset-contacts {
+  margin-bottom: 28px;
+}
+
+.form__fieldset-comment {
+  margin-bottom: 28px;
+}
+
+.form__fieldset-extra {
+  margin-bottom: 36px;
 }
 
 @media (min-width: @tablet-width) {
@@ -80,60 +83,48 @@
     line-height: 30px;
   }
 
-  .form__fieldset {
-    margin-bottom: 64px;
-
-    &:last-of-type {
-      text-align: left;
-    }
-
-    &--send {
-      margin-bottom: 55px;
-    }
+  .form__text-small {
+    font-size: 16px;
+    line-height: 16px;
   }
 
-  .form__fieldset > .form__wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
+  .form__legend {
+    font-size: 36px;
   }
 
-  .form__fieldset--extra .form__label {
-    width: 284px;
-  }
-
-  .form__fieldset--send > .form__wrapper {
-    justify-content: start;
-  }
-
-  .form__inner-fieldset {
-    &:first-of-type {
-      margin-bottom: 70px;
-    }
-
-    &--bordered {
-      margin: 0 auto;
-      width: 630px;
-      box-sizing: border-box;
-    }
-
-    &--bordered > .form__wrapper {
-      margin: 0;
-      padding: 0;
-      width: 100%;
-    }
-  }
-
-  .form__legend,
   .form__label {
-    width: 100%;
+    font-size: 20px;
+    line-height: 1;
   }
 
-  .form__submit-btn {
-    margin-bottom: 0;
-    margin-right: 60px;
-    width: 284px;
+  .form__text-field,
+  .form__number-field,
+  .form__email-field,
+  .form__phone-field {
+    padding-bottom: 2px;
+    padding-left: 18px;
+    height: 52px;
+    .font-secondary(20px, 20px, #444444);
+  }
+
+  .form__fieldset-identity {
+    margin-bottom: 72px;
+  }
+
+  .form__fieldset-goal {
+    margin-bottom: 75px;
+  }
+
+  .form__fieldset-contacts {
+    margin-bottom: 65px;
+  }
+
+  .form__fieldset-comment {
+    margin-bottom: 65px;
+  }
+
+  .form__fieldset-extra {
+    margin-bottom: 23px;
   }
 }
 
@@ -141,52 +132,35 @@
   .form__wrapper {
     padding: 0;
     width: @desktop-wrapper-width;
+    box-sizing: content-box;
   }
 
-  .form__fieldset {
-    margin-bottom: 66px;
-
-    &:first-of-type {
-      display: flex;
-      justify-content: space-between;
-      align-items: stretch;
-      margin-left: auto;
-      margin-right: auto;
-      width: @desktop-wrapper-width;
-    }
-
-    &--send {
-      margin-bottom: 60px;
-    }
+  .form__id-goal-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    margin-bottom: 69px;
+    width: @desktop-wrapper-width;
   }
 
-  .form__inner-fieldset {
-    margin: 0;
-    width: 570px;
-
-    &:first-of-type {
-      margin-bottom: 0;
-    }
+  .form__fieldset-identity {
+    margin-bottom: 0;
   }
 
-  .form__inner-fieldset > .form__wrapper {
-    margin: 0;
-    width: 100%;
+  .form__fieldset-goal {
+    margin-bottom: 0;
   }
 
-  .form__label {
-    width: 570px;
+  .form__fieldset-contacts {
+    margin-bottom: 67px;
   }
 
-  .form__fieldset--comment .form__label {
-    width: 100%;
+  .form__fieldset-comment {
+    margin-bottom: 67px;
   }
 
-  .form__submit-btn {
-    width: 570px;
-  }
-
-  .form__text-small {
-    width: 570px;
+  .form__fieldset-extra {
+    margin-bottom: 62px;
   }
 }

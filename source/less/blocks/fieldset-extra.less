@@ -15,3 +15,42 @@
     margin: 0;
   }
 }
+
+@media (min-width: @tablet-width) {
+  .fieldset-extra__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .fieldset-extra__legend {
+    margin-bottom: 56px;
+    width: 100%;
+  }
+
+  .fieldset-extra__label {
+    padding-left: 57px;
+    margin-bottom: 32px;
+    width: 286px;
+    min-height: 40px;
+    box-sizing: border-box;
+
+    &:last-of-type {
+      margin-bottom: 32px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .fieldset-extra__label {
+    padding-left: 58px;
+    margin-bottom: 0;
+    width: 245px;
+    box-sizing: border-box;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+}

@@ -21,7 +21,7 @@
 @media (min-width: @tablet-width) {
   .menu-list {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
     border-top: none;
   }
@@ -41,12 +41,16 @@
 }
 
 @media (min-width: @desktop-width) {
+  .menu-list__item {
+    margin-left: 34px;
+  }
+
   .menu-list__link {
     font-size: 20px;
     line-height: 25px;
-  }
 
-  .menu-list__link--white {
-    color: #ffffff;
+    &--white {
+      color: #ffffff;
+    }
   }
 }

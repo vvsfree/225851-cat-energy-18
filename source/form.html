@@ -31,51 +31,53 @@
     <section class="page-main__diet-program">
       <h2 class="visually-hidden">Форма подбора программы по параметрам</h2>
       <form class="form" action="https://echo.htmlacademy.ru" method="POST">
-        <p class="wrapper form__text">
+        <p class="form__wrapper form__text">
           Заполните анкету и мы подберем<br>программу питания для вашего кота
         </p>
-        <div class="fieldset-identity form__fieldset-identity">
-          <div class="wrapper">
-            <label class="form__label fieldset-identity__name">Имя:*<input
-                class="form__text-field fieldset-identity__name-field" type="text" name="nickname" placeholder="Барсик">
-            </label>
-            <label class="form__label fieldset-identity__weight">Вес (кг):*<input
-                class="form__number-field fieldset-identity__weight-field" type="number" name="weight" placeholder="7">
-            </label>
-            <label class="form__label fieldset-identity__age">Возраст (лет):<input
-                class="form__number-field fieldset-identity__age-field" type="number" name="age" placeholder="7">
-            </label>
+        <div class="form__id-goal-wrapper">
+          <div class="fieldset-identity form__fieldset-identity">
+            <div class="form__wrapper fieldset-identity__wrapper">
+              <label class="form__label fieldset-identity__name">Имя:*<input
+                  class="form__text-field fieldset-identity__name-field" type="text" name="nickname" placeholder="Барсик">
+              </label>
+              <label class="form__label fieldset-identity__weight">Вес (кг):*<input
+                  class="form__number-field fieldset-identity__weight-field" type="number" name="weight" placeholder="7">
+              </label>
+              <label class="form__label fieldset-identity__age">Возраст (лет):<input
+                  class="form__number-field fieldset-identity__age-field" type="number" name="age" placeholder="7">
+              </label>
+            </div>
           </div>
-        </div>
-        <div class="fieldset-goal form__fieldset-goal">
-          <div class="wrapper">
-            <label class="form__label fieldset-goal__label"><input class="fieldset-goal__radio-btn" type="radio"
-                name="target">Похудение</label>
-            <label class="form__label fieldset-goal__label"><input class="fieldset-goal__radio-btn" type="radio"
-                name="target">Набор массы</label>
-            <label class="form__label fieldset-goal__label"><input class="fieldset-goal__radio-btn" type="radio"
-                name="target">Не знаю (нужен ваш
-              совет)</label>
+          <div class="fieldset-goal form__fieldset-goal">
+            <div class="form__wrapper fieldset-goal__wrapper">
+              <label class="form__label fieldset-goal__label"><input class="fieldset-goal__radio-btn" type="radio"
+                  name="target">Похудение</label>
+              <label class="form__label fieldset-goal__label"><input class="fieldset-goal__radio-btn" type="radio"
+                  name="target">Набор массы</label>
+              <label class="form__label fieldset-goal__label"><input class="fieldset-goal__radio-btn" type="radio"
+                  name="target">Не знаю (нужен ваш
+                совет)</label>
+            </div>
           </div>
         </div>
         <div class="fieldset-contacts form__fieldset-contacts">
-          <div class="wrapper">
+          <div class="form__wrapper fieldset-contacts__wrapper">
             <h3 class="form__legend fieldset-contacts__legend">Контактные данные (владельца кота)</h3>
             <label class="form__label fieldset-contacts__email">e-mail:*<input class="form__email-field fieldset-contacts__email-field"
                 type="email" name="email" placeholder="kuklachev@gmail.com"></label>
-            <label class="form__label">Телефон:*<input class="form__phone-field fieldset-contacts__phone-field"
+            <label class="form__label fieldset-contacts__phone">Телефон:*<input class="form__phone-field fieldset-contacts__phone-field"
                 type="text" name="phone" placeholder="8 (960) 900-60-90"></label>
           </div>
         </div>
         <div class="fieldset-comment form__fieldset-comment">
-          <div class="wrapper">
+          <div class="form__wrapper">
             <h3 class="form__legend fieldset-comment__legend">Комментарий</h3>
             <label class="form__label"><textarea class="form__text-field fieldset-comment__text-field" name="comments" cols="30" rows="10"
                 placeholder="Расскажите обо всех повадках кота"></textarea></label>
           </div>
         </div>
         <div class="fieldset-extra form__fieldset-extra">
-          <div class="wrapper">
+          <div class="form__wrapper fieldset-extra__wrapper">
             <h3 class="form__legend fieldset-extra__legend">Дополнительно</h3>
             <label class="form__label fieldset-extra__label"><input class="form__checkbox fieldset-extra__checkbox" type="checkbox"
                 name="extra-choice-1">Сахарозаменитель</label>
@@ -88,9 +90,9 @@
           </div>
         </div>
         <div class="fieldset-send form__fieldset-send">
-          <div class="wrapper">
-            <button class="btn btn--larger form__submit-btn fieldset-send__btn" type="submit">Отправить заявку</button>
-            <small class="form__text-small">* — Обязательные поля</small>
+          <div class="form__wrapper fieldset-send__wrapper">
+            <button class="btn btn--flex form__submit-btn fieldset-send__btn" type="submit">Отправить заявку</button>
+            <small class="form__text-small fieldset-send__text-small">* — Обязательные поля</small>
           </div>
         </div>
       </form>

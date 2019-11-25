@@ -80,18 +80,43 @@
 
 @media (min-width: @desktop-width) {
   .promo {
-    padding-top: 214px;
-    margin-top: -120px;
-    min-height: 482px;
+    padding-top: 222px;
+    padding-bottom: 2px;
+    margin-top: -188px;
+    min-height: 472px;
     background:
-      url("../../img/index-can-desktop@1x.png") 62% 130px no-repeat,
-      url("../../img/index-background-desktop@1x.jpg") right 0 no-repeat,
+      url("../../img/index-background-desktop@1x.jpg") right 4px top no-repeat,
       linear-gradient(to right, #ffffff 50%, #64a83b 50%);
   }
 
-  .promo__wrapper {
+  .promo__header {
+    margin-bottom: -261px;
+  }
+
+  .promo__header-wrapper {
     padding-left: 80px;
-    padding-right: 670px;
-    box-sizing: border-box;
+    padding-right: 650px;
+  }
+
+  .promo__wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    background-color: transparent;
+  }
+
+  .promo__image {
+    content: url("../../img/index-can-desktop@1x.png");
+    margin: 0;
+    margin-left: 125px;
+    order: 1;
+    width: 552px;
+    height: 499px;
+  }
+
+  .promo__btn {
+    position: static;
+    margin-left: 80px;
+    margin-bottom: 132px;
   }
 }

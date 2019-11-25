@@ -21,17 +21,11 @@
 .slider__slide--before {
   z-index: 20;
   background: #f2f2f2 url("../../img/before-mobile@1x.png") left top no-repeat;
-
-  // outline: 1px solid green;
-  // outline-offset: -1px;
 }
 
 .slider__slide--after {
   z-index: 10;
   background: #eaeaea url("../../img/after-mobile@1x.png") left top no-repeat;
-
-  // outline: 1px solid blue;
-  // outline-offset: -1px;
 }
 
 .slider__controls {
@@ -65,7 +59,7 @@
 @media (min-width: @tablet-width) {
   .slider {
     background:
-      linear-gradient(to bottom, #ffffff @slider-gradient-border, transparent @slider-gradient-border),
+      linear-gradient(to bottom, #ffffff @tablet-slider-gradient-border, transparent @tablet-slider-gradient-border),
       linear-gradient(to right, #f2f2f2 50%, #eaeaea 50%);
   }
 
@@ -78,13 +72,13 @@
     width: @tablet-wrapper-width / 2;
     background:
       url("../../img/before-tablet@1x.png") 15px top no-repeat,
-      linear-gradient(to bottom, #ffffff @slider-gradient-border, #f2f2f2 @slider-gradient-border);
+      linear-gradient(to bottom, #ffffff @tablet-slider-gradient-border, #f2f2f2 @tablet-slider-gradient-border);
   }
 
   .slider__slide--after {
     background:
       url("../../img/after-tablet@1x.png") 15px top no-repeat,
-      linear-gradient(to bottom, #ffffff @slider-gradient-border, #eaeaea @slider-gradient-border);
+      linear-gradient(to bottom, #ffffff @tablet-slider-gradient-border, #eaeaea @tablet-slider-gradient-border);
   }
 
   .slider__controls {
@@ -101,7 +95,7 @@
 
 @media (min-width: @desktop-width) {
   .slider {
-    min-height: 675px;
+    min-height: 655px;
   }
 
   .slider__wrapper {
@@ -111,6 +105,15 @@
   }
 
   .slider__slide--before {
-    width: 345px;
+    width: 365px;
+    background:
+      url("../../img/before-desktop@1x.png") 0 0 no-repeat,
+      linear-gradient(to bottom, #ffffff @desktop-slider-gradient-border, #f2f2f2 @desktop-slider-gradient-border);
+  }
+
+  .slider__slide--after {
+    background:
+      url("../../img/after-desktop@1x.png") 0 0 no-repeat,
+      linear-gradient(to bottom, #ffffff @desktop-slider-gradient-border, #eaeaea @desktop-slider-gradient-border);
   }
 }

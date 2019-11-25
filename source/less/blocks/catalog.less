@@ -22,10 +22,10 @@
     &:not(:first-child) {
       margin-top: 0;
     }
-  }
 
-  .catalog__item:not(:nth-child(2n+1)) {
-    margin-left: 60px;
+    &:not(:nth-child(2n+1)) {
+      margin-left: 60px;
+    }
   }
 }
 
@@ -34,7 +34,11 @@
     width: @desktop-wrapper-width;
   }
 
-  .catalog__item:not(:nth-child(4n+1)) {
-    margin-left: 80px;
+  .catalog__item {
+    margin-bottom: 61px;
+
+    &:not(:nth-child(4n+1)) {
+      margin-left: 80px;
+    }
   }
 }

@@ -68,16 +68,41 @@
 
 @media (min-width: @desktop-width) {
   .extra-item {
+    align-items: center;
     flex-wrap: nowrap;
-    padding: 16px 0;
+    padding: 0;
+    padding-left: 1px;
+    padding-top: 16px;
+    padding-bottom: 15px;
     border: 1px solid #cdcdcd;
     border-left: none;
     border-right: none;
   }
 
+  .extra-item__title {
+    width: 245px;
+  }
+
+  .extra-item__price-tag {
+    justify-content: space-between;
+    align-items: baseline;
+    padding-top: 6px;
+    width: 327px;
+  }
+
+  .extra-item__amount {
+    padding-left: 40px;
+  }
+
+  .extra-item__price {
+    padding: 0;
+    width: auto;
+    min-width: 43px;
+    text-align: left;
+  }
+
   .extra-item__order-btn {
     margin-top: 0;
-    margin-left: 40px;
     width: 245px;
   }
 }

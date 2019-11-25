@@ -27,8 +27,9 @@
   }
 
   @background-color: #68b738;
+
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     top: -2px;
     left: 0;
@@ -104,10 +105,12 @@
 @media (min-width: @desktop-width) {
   .advantages__item {
     padding-right: 0;
+    margin-bottom: 0;
     width: 245px;
-  }
+    min-height: 230px;
 
-  .advantages__item:not(:first-of-type) {
-    margin-left: 80px;
+    &:last-of-type {
+      margin-bottom: 0;
+    }
   }
 }
