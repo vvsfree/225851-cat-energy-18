@@ -69,6 +69,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
+    counter-reset: item;
   }
 
   .advantages__item {
@@ -94,6 +95,34 @@
       left: 0;
       width: 80px;
       height: 80px;
+    }
+
+    &::after {
+      counter-increment: item;
+      content: counter(item);
+      position: absolute;
+      z-index: -1;
+      top: -40px;
+      left: 115px;
+      width: auto;
+      height: auto;
+      .font-secondary(281.07px, 1, #f2f2f2);
+    }
+
+    &--leaf::after {
+      left: 118px;
+    }
+
+    &--powder::after {
+      left: 112px;
+    }
+
+    &--dining::after {
+      left: 113px;
+    }
+
+    &--clock::after {
+      left: 114px;
     }
   }
 

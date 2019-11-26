@@ -56,7 +56,7 @@
 
 .category__btn {
   position: relative;
-  padding-right: 40px;
+  padding-right: 35px;
   .font-secondary(16px, 1, #111111);
   text-transform: uppercase;
   text-decoration: none;
@@ -64,11 +64,31 @@
   &::after {
     content: "";
     position: absolute;
-    top: 7px;
-    right: 5px;
+    top: 0;
+    bottom: 0;
+    right: 0;
     width: 24px;
-    height: 11px;
-    background: url("../../img/icon-right-arrow-long.svg") 0 0 no-repeat;
+    height: 100%;
+    background: url("../../img/icon-right-arrow-long.svg") 0 center no-repeat;
+  }
+
+  &:hover,
+  &:active {
+    padding-right: 44px;
+  }
+
+  &:hover::after,
+  &:active::after {
+    width: 33px;
+    background: url("../../img/icon-right-arrow-verylong.svg") 0 center no-repeat;
+  }
+
+  &:active {
+    color: rgba(17, 17, 17, 0.3);
+  }
+
+  &:active::after {
+    opacity: 0.3;
   }
 }
 
@@ -145,20 +165,12 @@
   }
 
   .category__btn {
-    position: relative;
-    padding-right: 40px;
+    padding-right: 47px;
     .font-secondary(20px, 1, #111111);
-    text-transform: uppercase;
-    text-decoration: none;
 
-    &::after {
-      content: "";
-      position: absolute;
-      top: 7px;
-      right: 5px;
-      width: 24px;
-      height: 11px;
-      background: url("../../img/icon-right-arrow-long.svg") 0 0 no-repeat;
+    &:hover,
+    &:active {
+      padding-right: 56px;
     }
   }
 }
@@ -166,7 +178,7 @@
 @media (min-width: @desktop-width) {
   .category {
     padding-top: 76px;
-    padding-bottom: 58px;
+    padding-bottom: 60px;
     padding-left: 52px;
     padding-right: 52px;
     width: 570px;
@@ -222,6 +234,6 @@
   }
 
   .category__description {
-    margin-bottom: 32px;
+    margin-bottom: 30px;
   }
 }
