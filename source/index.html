@@ -96,32 +96,49 @@
               <dt class="stats__value">60 дней</dt>
               <dd class="stats__desc">Затрачено времени</dd>
             </div>
+            <div class="stats__item stats__item--text">
+              <dt class="stats__value">15 000 руб.</dt>
+              <dd class="stats__desc">Затраты на питание:</dd>
+            </div>
           </dl>
-          <b class="stats__cost">Затраты на питание: 15 000 руб.</b>
         </div>
       </div>
       <div class="slider example__slider">
         <div class="slider__wrapper">
+          <input class="slider__radio slider__radio--before" type="radio" id="slider-control-before" name="slider-control">
+          <input class="slider__radio slider__radio--after" type="radio" id="slider-control-after" name="slider-control">
           <div class="slider__slide slider__slide--before">
             Фоновое изображение располневшего кота
           </div>
           <div class="slider__slide slider__slide--after">
             Фоновое изображение анорексичного кота
           </div>
+          <div class="wrapper slider__controls">
+            <div class="slider__control-layout slider__control-layout--left">
+              <label class="slider__control" for="slider-control-before">Было</label>
+            </div>
+            <span class="slider__bar"></span>
+            <div class="slider__control-layout slider__control-layout--right">
+              <label class="slider__control" for="slider-control-after">Стало</label>
+            </div>
+          </div>
         </div>
-        <!-- <div class="wrapper slider__controls">
-          <span class="slider__control slider__control--left">Было</span>
-          <span class="slider__control slider__control--right">Стало</span>
-        </div> -->
       </div>
     </section>
     <section class="contacts">
       <h2 class="visually-hidden">Контакты</h2>
       <div class="wrapper contacts__wrapper">
         <b class="contacts__prompt">Приглашаем<br>к сотрудничеству дилеров!</b>
-        <p class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+        <p class="contacts__address">
+          <span class="contacts__street">ул. Большая Конюшенная, д. 19/8</span>
+          <span class="contacts__city">Санкт-Петербург</span>
+        </p>
       </div>
-      <div class="contacts__map"></div>
+      <div class="contacts__map">
+        <div class="wrapper">
+          <img class="contacts__pin" src="img/map-pin.png" width="124" height="106" alt="Указатель на карте">
+        </div>
+      </div>
     </section>
   </main>
 
