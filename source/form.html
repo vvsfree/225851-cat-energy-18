@@ -52,13 +52,14 @@
           </div>
           <div class="fieldset-goal form__fieldset-goal">
             <div class="form__wrapper fieldset-goal__wrapper">
-              <label class="form__label fieldset-goal__label"><input class="fieldset-goal__radio-btn" type="radio"
-                  name="target">Похудение</label>
-              <label class="form__label fieldset-goal__label"><input class="fieldset-goal__radio-btn" type="radio"
-                  name="target">Набор массы</label>
-              <label class="form__label fieldset-goal__label"><input class="fieldset-goal__radio-btn" type="radio"
-                  name="target">Не знаю (нужен ваш
-                совет)</label>
+              <input class="fieldset-goal__radio-btn" type="radio" id="goal-slim" name="goal" checked>
+              <label class="form__label fieldset-goal__label" for="goal-slim">Похудение</label>
+
+              <input class="fieldset-goal__radio-btn" type="radio" id="goal-pro" name="goal">
+              <label class="form__label fieldset-goal__label" for="goal-pro">Набор массы</label>
+
+              <input class="fieldset-goal__radio-btn" type="radio" id="goal-unknown" name="goal">
+              <label class="form__label fieldset-goal__label" for="goal-unknown">Не знаю (нужен ваш совет)</label>
             </div>
           </div>
         </div>
@@ -83,15 +84,17 @@
         <div class="fieldset-extra form__fieldset-extra">
           <div class="form__wrapper fieldset-extra__wrapper">
             <h3 class="form__legend fieldset-extra__legend">Дополнительно</h3>
-            <label class="form__label fieldset-extra__label"><input class="form__checkbox fieldset-extra__checkbox"
-                type="checkbox" name="extra-choice-1">Сахарозаменитель</label>
-            <label class="form__label fieldset-extra__label"><input class="form__checkbox fieldset-extra__checkbox"
-                type="checkbox" name="extra-choice-2">Питьевая
-              вода</label>
-            <label class="form__label fieldset-extra__label"><input class="form__checkbox fieldset-extra__checkbox"
-                type="checkbox" name="extra-choice-3">Молоко</label>
-            <label class="form__label fieldset-extra__label"><input class="form__checkbox fieldset-extra__checkbox"
-                type="checkbox" name="extra-choice-4">Витамины</label>
+            <input class="form__checkbox fieldset-extra__checkbox" type="checkbox" id="extra-choice-1" name="extra-choice-1">
+            <label class="form__label fieldset-extra__label" for="extra-choice-1">Сахарозаменитель</label>
+
+            <input class="form__checkbox fieldset-extra__checkbox" type="checkbox" id="extra-choice-2" name="extra-choice-2">
+            <label class="form__label fieldset-extra__label" for="extra-choice-2">Питьевая вода</label>
+
+            <input class="form__checkbox fieldset-extra__checkbox" type="checkbox" id="extra-choice-3" name="extra-choice-3">
+            <label class="form__label fieldset-extra__label" for="extra-choice-3">Молоко</label>
+
+            <input class="form__checkbox fieldset-extra__checkbox" type="checkbox" id="extra-choice-4" name="extra-choice-4">
+            <label class="form__label fieldset-extra__label" for="extra-choice-4">Витамины</label>
           </div>
         </div>
         <div class="fieldset-send form__fieldset-send">

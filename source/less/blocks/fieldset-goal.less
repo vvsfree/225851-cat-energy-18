@@ -1,5 +1,5 @@
 .fieldset-goal {
-  padding-top: 19px;
+  padding-top: 18px;
   padding-bottom: 21px;
   border: 1px solid #ededed;
 }
@@ -9,13 +9,44 @@
 }
 
 .fieldset-goal__label {
+  position: relative;
   padding-left: 46px;
-  margin-bottom: 14px;
+  margin-bottom: 13px;
   min-height: 30px;
 
   &:last-of-type {
-    margin-top: -2px;
     margin-bottom: 0;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 28px;
+    height: 28px;
+
+    border-radius: 50%;
+    background-color: #ffffff;
+    border: 1px solid #cdcdcd;
+  }
+
+  &:hover,
+  &:active {
+    &::before {
+      border: 1px solid #bababa;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.fieldset-goal__radio-btn:checked + .fieldset-goal__label {
+  &::before {
+    background-color: #68b738;
+    box-shadow: inset 0 0 0 8px #ffffff;
   }
 }
 
@@ -40,9 +71,17 @@
     padding-left: 90px;
     margin-bottom: 23px;
 
-    &:last-of-type {
-      margin-top: -2px;
-      margin-bottom: 0;
+    &::before {
+      top: -5px;
+      left: 30px;
+      width: 38px;
+      height: 38px;
+    }
+  }
+
+  .fieldset-goal__radio-btn:checked + .fieldset-goal__label {
+    &::before {
+      box-shadow: inset 0 0 0 10px #ffffff;
     }
   }
 }
@@ -62,9 +101,9 @@
     padding-left: 86px;
     margin-bottom: 23px;
 
-    &:last-of-type {
-      margin-top: -2px;
-      margin-bottom: 0;
+    &::before {
+      top: -5px;
+      left: 27px;
     }
   }
 }
