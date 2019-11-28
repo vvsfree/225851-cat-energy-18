@@ -1,6 +1,6 @@
 // Можно добавить переменную ширины блока
 .text-logo {
-  padding-top: 39px;
+  padding-top: 41px;
   padding-bottom: 31px;
   text-align: center;
 }
@@ -9,6 +9,14 @@
   display: block;
   margin: 0 auto;
   width: 128px;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 }
 
 .text-logo__image {
@@ -20,5 +28,9 @@
 @media (min-width: @tablet-width) {
   .text-logo {
     padding: 0;
+  }
+
+  .text-logo__link {
+    margin: 0;
   }
 }

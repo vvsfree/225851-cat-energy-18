@@ -1,0 +1,70 @@
+.fieldset-goal {
+  padding-top: 19px;
+  padding-bottom: 21px;
+  border: 1px solid #ededed;
+}
+
+.fieldset-goal__radio-btn {
+  display: none;
+}
+
+.fieldset-goal__label {
+  padding-left: 46px;
+  margin-bottom: 14px;
+  min-height: 30px;
+
+  &:last-of-type {
+    margin-top: -2px;
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .fieldset-goal {
+    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 630px;
+    border: 1px solid #e6e6e6;
+  }
+
+  .fieldset-goal__wrapper {
+    padding: 0;
+    padding-top: 29px;
+    padding-bottom: 31px;
+    width: 100%;
+    box-sizing: content-box;
+  }
+
+  .fieldset-goal__label {
+    padding-left: 90px;
+    margin-bottom: 23px;
+
+    &:last-of-type {
+      margin-top: -2px;
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .fieldset-goal {
+    margin: 0;
+    width: 568px;
+  }
+
+  .fieldset-goal__wrapper {
+    margin: 0;
+    width: 100%;
+  }
+
+  .fieldset-goal__label {
+    padding-left: 86px;
+    margin-bottom: 23px;
+
+    &:last-of-type {
+      margin-top: -2px;
+      margin-bottom: 0;
+    }
+  }
+}

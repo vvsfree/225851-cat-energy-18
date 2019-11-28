@@ -1,13 +1,13 @@
 .extra-item {
-  padding-bottom: 17px;
+  padding-top: 13px;
+  padding-bottom: 16px;
   border-top: 1px solid #cdcdcd;
   border-bottom: 1px solid #cdcdcd;
 }
 
 .extra-item__title {
   margin: 0;
-  margin-bottom: 12px;
-  padding-top: 12px;
+  margin-bottom: 14px;
   .font-secondary(16px, 1, #222222);
   text-transform: uppercase;
 }
@@ -15,7 +15,7 @@
 .extra-item__price-tag {
   display: flex;
   margin: 0;
-  margin-bottom: 14px;
+  margin-bottom: 15px;
   justify-content: space-between;
   font-family: @fontPrimary;
   font-size: 14px;
@@ -27,10 +27,10 @@
   .extra-item {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: baseline;
     align-content: space-between;
     flex-wrap: wrap;
-    padding-left: 36px;
+    padding-left: 38px;
     padding-right: 36px;
     padding-top: 26px;
     padding-bottom: 26px;
@@ -46,30 +46,63 @@
   }
 
   .extra-item__price-tag {
+    justify-content: flex-end;
     margin-bottom: 0;
     width: 60%;
     font-size: 16px;
     line-height: 20px;
+    text-align: right;
+  }
+
+  .extra-item__price {
+    margin: 0;
+    padding-left: 5px;
+    width: 90px;
   }
 
   .extra-item__order-btn {
-    margin-top: 26px;
+    margin-top: 22px;
     width: 100%;
   }
 }
 
 @media (min-width: @desktop-width) {
   .extra-item {
+    align-items: center;
     flex-wrap: nowrap;
-    padding: 16px 0;
+    padding: 0;
+    padding-left: 1px;
+    padding-top: 16px;
+    padding-bottom: 15px;
     border: 1px solid #cdcdcd;
     border-left: none;
     border-right: none;
   }
 
+  .extra-item__title {
+    width: 245px;
+  }
+
+  .extra-item__price-tag {
+    justify-content: space-between;
+    align-items: baseline;
+    padding-top: 6px;
+    width: 327px;
+  }
+
+  .extra-item__amount {
+    padding-left: 40px;
+  }
+
+  .extra-item__price {
+    padding: 0;
+    width: auto;
+    min-width: 43px;
+    text-align: left;
+  }
+
   .extra-item__order-btn {
     margin-top: 0;
-    margin-left: 40px;
     width: 245px;
   }
 }
