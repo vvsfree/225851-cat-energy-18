@@ -37,7 +37,7 @@
 
 .slider__control-layout {
   display: flex;
-  width: 85px;
+  width: 80px;
 
   &--left {
     justify-content: flex-end;
@@ -74,6 +74,10 @@
     border-radius: 3px;
     background-color: #68b738;
   }
+}
+
+.slider__thumb {
+  display: none;
 }
 
 .slider__radio {
@@ -159,16 +163,64 @@
     background-color: #dcdcdc;
 
     &::before {
-      content: "";
-      position: absolute;
-      top: -13px;
-      left: 198px;
-      width: 8px;
-      height: 8px;
-      border: 12px solid #ffffff;
-      border-radius: 50%;
-      box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.15);
-      background-color: #68b738;
+      display: none;
+    }
+  }
+
+  .slider__thumb {
+    position: absolute;
+    top: -13px;
+    left: 198px;
+    width: 34px;
+    height: 34px;
+
+    display: block;
+    padding: 0;
+    margin: 0;
+
+    font-size: 0;
+    cursor: pointer;
+
+    outline: none;
+    border: none;
+    border-radius: 50%;
+    background-color: #68b738;
+    box-shadow:
+      inset 0px 0px 0px 1px #cdcdcd,
+      inset 0px 0px 0px 13px #ffffff,
+      0px 2px 5px 0px rgba(0, 0, 0, 0.15);
+
+    &:hover {
+      box-shadow:
+        inset 0px 0px 0px 1px #cdcdcd,
+        inset 0px 0px 0px 13px #ffffff,
+        0px 3px 5px 0px rgba(0, 0, 0, 0.25);
+    }
+
+    &:active {
+      box-shadow:
+        inset 0px 0px 0px 2px #68b738,
+        inset 0px 0px 0px 13px #ffffff,
+        0px 4px 5px 0px rgba(0, 0, 0, 0.3);
+    }
+  }
+
+  .slider__radio {
+    &--before:checked ~ .slider__slide--before {
+      width: 551px;
+    }
+
+    &--after:checked ~ .slider__slide--before {
+      width: 157px;
+    }
+
+    &--before:checked ~ .slider__controls .slider__thumb {
+      left: auto;
+      right: 0;
+    }
+
+    &--after:checked ~ .slider__controls .slider__thumb {
+      left: 0;
     }
   }
 }
@@ -196,4 +248,23 @@
       url("../../img/after-desktop@1x.png") 0 0 no-repeat,
       linear-gradient(to bottom, #ffffff @desktop-slider-gradient-border, #eaeaea @desktop-slider-gradient-border);
   }
+
+  .slider__controls {
+    left: 39px;
+    bottom: 72px;
+    width: 100%;
+  }
+
+  .slider__control-layout {
+    width: 91px;
+  }
+
+  .slider__radio {
+    &--before:checked ~ .slider__slide--before {
+      width: 560px;
+    }
+
+    &--after:checked ~ .slider__slide--before {
+      width: 167px;
+    }
 }
