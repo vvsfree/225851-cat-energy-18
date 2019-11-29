@@ -1,0 +1,68 @@
+.title {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  &::before,
+  &::after {
+    content: "";
+    margin-top: 14px;
+    width: 0;
+    height: 3px;
+    background-color: #68b738;
+  }
+
+  &::after {
+    flex-grow: 1;
+    margin-left: 20px;
+    width: 1px;
+  }
+}
+
+@media (min-width: @mobile-wrapper-width) {
+  .title {
+    &::before {
+      margin-right: ~"calc((100% - @{mobile-wrapper-width}) / 2)";
+    }
+  }
+}
+
+@media (min-width: @mobile-width) {
+  .title {
+    &::before {
+      margin-right: 20px;
+      width: ~"calc((100% - @{mobile-width}) / 2)";
+    }
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .title {
+    &::before,
+    &::after {
+      margin-top: 22px;
+    }
+
+    &::before {
+      margin-right: 37px;
+      width: ~"calc((100% - @{tablet-wrapper-width}) / 2)";
+    }
+
+    &::after {
+      margin-left: 44px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .title {
+    &::before {
+      margin-right: 40px;
+      width: ~"calc((100% - @{desktop-width}) / 2)";
+    }
+
+    &::after {
+      margin-left: 40px;
+    }
+  }
+}
