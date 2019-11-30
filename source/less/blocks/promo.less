@@ -2,10 +2,19 @@
   padding-top: 26px;
   padding-bottom: 168px;
   text-align: center;
-  background:
-    url("../../img/index-background-mobile@1x.jpg") center 0 no-repeat,
+  background-image:
+    url("../../img/index-background-mobile@1x.jpg"),
     linear-gradient(to right, #65a93c 50%, #63a73a 50%);
-}
+  background-position: center 0, 0 0;
+  background-repeat: no-repeat, no-repeat;
+  background-size: 320px auto, auto;
+
+  @media(min-resolution: @retina-dppx) {
+    background-image:
+      url("../../img/index-background-mobile@2x.jpg"),
+      linear-gradient(to right, #65a93c 50%, #63a73a 50%);
+    }
+  }
 
 .promo__title {
   padding: 0;
@@ -63,9 +72,6 @@
   }
 
   .promo__image {
-    display: block;
-    // margin-bottom: -10px;
-    content: url("../../img/index-can-tablet@1x.jpg");
     width: 100%;
     height: auto;
   }
@@ -85,9 +91,18 @@
     padding-bottom: 2px;
     margin-top: -188px;
     min-height: 472px;
-    background:
-      url("../../img/index-background-desktop@1x.jpg") right 4px top no-repeat,
+    background-image:
+      url("../../img/index-background-desktop@1x.jpg"),
       linear-gradient(to right, #ffffff 50%, #64a83b 50%);
+    background-position: right top, 0 0;
+    background-repeat: no-repeat, no-repeat;
+    background-size: 720px 696px, auto;
+
+    @media(min-resolution: @retina-dppx) {
+      background-image:
+        url("../../img/index-background-desktop@2x.jpg"),
+        linear-gradient(to right, #ffffff 50%, #64a83b 50%);
+    }
   }
 
   .promo__header {
@@ -106,11 +121,13 @@
     background-color: transparent;
   }
 
-  .promo__image {
-    content: url("../../img/index-can-desktop@1x.png");
-    margin: 0;
-    margin-left: 125px;
+  .promo__picture {
     order: 1;
+    margin-left: 125px;
+  }
+
+  .promo__image {
+    margin: 0;
     width: 552px;
     height: 499px;
   }
