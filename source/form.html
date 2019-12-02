@@ -39,11 +39,11 @@
             <div class="form__wrapper fieldset-identity__wrapper">
               <label class="form__label fieldset-identity__name">Имя:*<input
                   class="form__text-field fieldset-identity__name-field" type="text" name="nickname"
-                  placeholder="Барсик">
+                  placeholder="Барсик" required>
               </label>
               <label class="form__label fieldset-identity__weight">Вес (кг):*<input
                   class="form__number-field fieldset-identity__weight-field" type="number" name="weight"
-                  placeholder="7">
+                  placeholder="7" required>
               </label>
               <label class="form__label fieldset-identity__age">Возраст (лет):<input
                   class="form__number-field fieldset-identity__age-field" type="number" name="age" placeholder="7">
@@ -68,10 +68,10 @@
           <div class="form__wrapper fieldset-contacts__wrapper">
             <label class="form__label fieldset-contacts__email">e-mail:*<input
                 class="form__email-field fieldset-contacts__email-field" type="email" name="email"
-                placeholder="kuklachev@gmail.com"></label>
+                placeholder="kuklachev@gmail.com" required></label>
             <label class="form__label fieldset-contacts__phone">Телефон:*<input
                 class="form__phone-field fieldset-contacts__phone-field" type="text" name="phone"
-                placeholder="8 (960) 900-60-90"></label>
+                placeholder="8 (960) 900-60-90" required></label>
           </div>
         </div>
         <div class="fieldset-comment form__fieldset-comment">
@@ -84,7 +84,7 @@
         <div class="fieldset-extra form__fieldset-extra">
           <h3 class="title form__legend fieldset-extra__legend">Дополнительно</h3>
           <div class="form__wrapper fieldset-extra__wrapper">
-            <input class="form__checkbox fieldset-extra__checkbox" type="checkbox" id="extra-choice-1" name="extra-choice-1">
+            <input class="form__checkbox fieldset-extra__checkbox" type="checkbox" id="extra-choice-1" name="extra-choice-1" checked>
             <label class="form__label fieldset-extra__label" for="extra-choice-1">Сахарозаменитель</label>
 
             <input class="form__checkbox fieldset-extra__checkbox" type="checkbox" id="extra-choice-2" name="extra-choice-2">
