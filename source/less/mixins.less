@@ -5,3 +5,9 @@
   color: @color;
   font-weight: @weight;
 }
+
+.slide-bg-gradient-image(@image, @gradient-border, @bg-color) {
+  background-image:
+    url("../../img/@{image}"),
+    linear-gradient(to bottom, #ffffff @gradient-border, @bg-color @gradient-border);
+}
