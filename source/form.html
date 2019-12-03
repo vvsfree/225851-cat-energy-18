@@ -11,7 +11,12 @@
   <header class="page-header">
     <div class="wrapper page-header__wrapper">
       <a class="page-header__logo" href="index.html">
-        <img class="page-header__logo-image" src="img/logo-mobile.svg" width="190" height="38" alt="Логотип Cat Energy">
+        <picture class="page-header__logo-picture">
+          <source media="(min-width: 1300px)" srcset="img/logo-desktop.svg">
+          <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+          <img class="page-header__logo-image" src="img/logo-mobile.svg" width="190" height="38"
+            alt="Логотип Cat Energy">
+        </picture>
       </a>
       <button class="page-header__nav-toggle page-header__nav-toggle--open" type="button">
         Открыть|Закрыть меню сайта
@@ -42,8 +47,8 @@
                   placeholder="Барсик" required>
               </label>
               <label class="form__label fieldset-identity__weight">Вес (кг):*<input
-                  class="form__number-field fieldset-identity__weight-field" type="number" name="weight"
-                  placeholder="7" required>
+                  class="form__number-field fieldset-identity__weight-field" type="number" name="weight" placeholder="7"
+                  required>
               </label>
               <label class="form__label fieldset-identity__age">Возраст (лет):<input
                   class="form__number-field fieldset-identity__age-field" type="number" name="age" placeholder="7">
@@ -84,16 +89,20 @@
         <div class="fieldset-extra form__fieldset-extra">
           <h3 class="title form__legend fieldset-extra__legend">Дополнительно</h3>
           <div class="form__wrapper fieldset-extra__wrapper">
-            <input class="form__checkbox fieldset-extra__checkbox" type="checkbox" id="extra-choice-1" name="extra-choice-1" checked>
+            <input class="form__checkbox fieldset-extra__checkbox" type="checkbox" id="extra-choice-1"
+              name="extra-choice-1" checked>
             <label class="form__label fieldset-extra__label" for="extra-choice-1">Сахарозаменитель</label>
 
-            <input class="form__checkbox fieldset-extra__checkbox" type="checkbox" id="extra-choice-2" name="extra-choice-2">
+            <input class="form__checkbox fieldset-extra__checkbox" type="checkbox" id="extra-choice-2"
+              name="extra-choice-2">
             <label class="form__label fieldset-extra__label" for="extra-choice-2">Питьевая вода</label>
 
-            <input class="form__checkbox fieldset-extra__checkbox" type="checkbox" id="extra-choice-3" name="extra-choice-3">
+            <input class="form__checkbox fieldset-extra__checkbox" type="checkbox" id="extra-choice-3"
+              name="extra-choice-3">
             <label class="form__label fieldset-extra__label" for="extra-choice-3">Молоко</label>
 
-            <input class="form__checkbox fieldset-extra__checkbox" type="checkbox" id="extra-choice-4" name="extra-choice-4">
+            <input class="form__checkbox fieldset-extra__checkbox" type="checkbox" id="extra-choice-4"
+              name="extra-choice-4">
             <label class="form__label fieldset-extra__label" for="extra-choice-4">Витамины</label>
           </div>
         </div>
@@ -130,16 +139,41 @@
         </a>
       </div>
       <ul class="social page-footer__social">
-        <li class="social__item"><a class="social__link social__link--vk" href="#">Вконтакте</a></li>
-        <li class="social__item"><a class="social__link social__link--insta" href="#">Инстраграм</a></li>
-        <li class="social__item"><a class="social__link social__link--fb" href="#">Фэйсбук</a></li>
+        <li class="social__item">
+          <a class="social__link" href="#" aria-label="Вконтакте">
+            <svg class="social__icon social__icon--vk" width="22" height="12" role="img">
+              <use xlink:href="img/sprite.svg#icon-vk"></use>
+            </svg>
+            Вконтакте
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link" href="#" aria-label="Инстраграм">
+            <svg class="social__icon social__icon--insta" width="16" height="16" role="img">
+              <use xlink:href="img/sprite.svg#icon-insta"></use>
+            </svg>
+            Инстаграм
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link" href="#" aria-label="Фэйсбук">
+            <svg class="social__icon social__icon--fb" width="10" height="19" role="img">
+              <use xlink:href="img/sprite.svg#icon-fb"></use>
+            </svg>
+            Фэйсбук
+          </a>
+        </li>
       </ul>
       <address class="copyright page-footer__copyright">
-        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="HTML Academy">HTML
+          Academy
+          <svg class="copyright__icon" width="27px" height="34px" role="img">
+            <use xlink:href="img/sprite.svg#icon-academy"></use>
+          </svg>
+        </a>
       </address>
     </div>
   </footer>
-
 </body>
 
 </html>
