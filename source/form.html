@@ -71,12 +71,20 @@
         <div class="fieldset-contacts form__fieldset-contacts">
           <h3 class="title form__legend fieldset-contacts__legend">Контактные данные <br>(владельца кота)</h3>
           <div class="form__wrapper fieldset-contacts__wrapper">
-            <label class="form__label fieldset-contacts__email">e-mail:*<input
-                class="form__email-field fieldset-contacts__email-field" type="email" name="email"
-                placeholder="kuklachev@gmail.com" required></label>
-            <label class="form__label fieldset-contacts__phone">Телефон:*<input
-                class="form__phone-field fieldset-contacts__phone-field" type="text" name="phone"
-                placeholder="8 (960) 900-60-90" required></label>
+            <label class="form__label fieldset-contacts__email">
+              e-mail:*
+              <input class="form__email-field fieldset-contacts__email-field" type="email" name="email" placeholder="kuklachev@gmail.com" required>
+              <svg class="form__email-icon fieldset-contacts__email-icon" width="17" height="13" role="img">
+                  <use xlink:href="img/sprite.svg#icon-mail"></use>
+              </svg>
+            </label>
+            <label class="form__label fieldset-contacts__phone">
+              Телефон:*
+              <input class="form__phone-field fieldset-contacts__phone-field" type="text" name="phone" placeholder="8 (960) 900-60-90" required>
+              <svg class="form__phone-icon fieldset-contacts__phone-icon" width="20" height="20" role="img">
+                  <use xlink:href="img/sprite.svg#icon-phone"></use>
+              </svg>
+            </label>
           </div>
         </div>
         <div class="fieldset-comment form__fieldset-comment">
@@ -167,7 +175,7 @@
       <address class="copyright page-footer__copyright">
         <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="HTML Academy">HTML
           Academy
-          <svg class="copyright__icon" width="27px" height="34px" role="img">
+          <svg class="copyright__icon" width="27" height="34" role="img">
             <use xlink:href="img/sprite.svg#icon-academy"></use>
           </svg>
         </a>
