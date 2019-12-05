@@ -1,12 +1,15 @@
 .copyright {
-  padding-top: 30px;
+  padding-top: 21px;
   padding-bottom: 31px;
 }
 
 .copyright__link {
-  position: relative;
-  display: block;
-  padding-right: 48px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-left: -2px;
+
   font-family: @fontPrimary;
   font-size: 16px;
   line-height: 1;
@@ -14,17 +17,30 @@
   font-style: normal;
   text-decoration: none;
 
+  &:hover,
+  &:active {
+    .copyright__icon {
+      fill: @main-green-color;
+    }
+  }
+
   &:active {
     opacity: 0.3;
   }
+}
 
-  &::after {
-    content: "";
-    position: absolute;
-    top: -8px;
-    right: 0;
-    width: 41px;
-    height: 54px;
-    background: url("../../img/htmlacademy.svg") 7px -3px no-repeat;
+.copyright__icon {
+  width: 27px;
+  height: 34px;
+  fill: #666666;
+}
+
+@media (min-width: @tablet-width) {
+  .copyright {
+    padding: 0;
+  }
+
+  .copyright__link {
+    margin: 0;
   }
 }
