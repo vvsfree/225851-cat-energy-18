@@ -62,6 +62,16 @@
   }
 }
 
+.form__email-field:focus + .form__email-icon,
+.form__phone-field:focus + .form__phone-icon {
+  fill: @main-green-color;
+}
+
+.form__email-field:invalid + .form__email-icon,
+.form__phone-field:invalid + .form__phone-icon {
+  fill: #ff8282;
+}
+
 .form__fieldset-identity {
   margin-bottom: 23px;
 }
