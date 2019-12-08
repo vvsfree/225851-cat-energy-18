@@ -4,10 +4,15 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Кэт энерджи</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body>
+
+  <div style="display:none">
+    <include src="build/img/sprite.svg"></include>
+  </div>
+
   <header class="page-header">
     <div class="wrapper page-header__wrapper">
       <a class="page-header__logo" href="index.html">
@@ -73,16 +78,18 @@
           <div class="form__wrapper fieldset-contacts__wrapper">
             <label class="form__label fieldset-contacts__email">
               e-mail:*
-              <input class="form__email-field fieldset-contacts__email-field" type="email" name="email" placeholder="kuklachev@gmail.com" required>
+              <input class="form__email-field fieldset-contacts__email-field" type="email" name="email"
+                placeholder="kuklachev@gmail.com" required>
               <svg class="form__email-icon fieldset-contacts__email-icon" width="17" height="13" role="img">
-                  <use xlink:href="img/sprite.svg#icon-mail"></use>
+                <use xlink:href="#icon-mail"></use>
               </svg>
             </label>
             <label class="form__label fieldset-contacts__phone">
               Телефон:*
-              <input class="form__phone-field fieldset-contacts__phone-field" type="text" name="phone" placeholder="8 (960) 900-60-90" required>
+              <input class="form__phone-field fieldset-contacts__phone-field" type="text" name="phone"
+                placeholder="8 (960) 900-60-90" required>
               <svg class="form__phone-icon fieldset-contacts__phone-icon" width="20" height="20" role="img">
-                  <use xlink:href="img/sprite.svg#icon-phone"></use>
+                <use xlink:href="#icon-phone"></use>
               </svg>
             </label>
           </div>
@@ -150,7 +157,7 @@
         <li class="social__item">
           <a class="social__link" href="#" aria-label="Вконтакте">
             <svg class="social__icon social__icon--vk" width="22" height="12" role="img">
-              <use xlink:href="img/sprite.svg#icon-vk"></use>
+              <use xlink:href="#icon-vk"></use>
             </svg>
             Вконтакте
           </a>
@@ -158,7 +165,7 @@
         <li class="social__item">
           <a class="social__link" href="#" aria-label="Инстраграм">
             <svg class="social__icon social__icon--insta" width="16" height="16" role="img">
-              <use xlink:href="img/sprite.svg#icon-insta"></use>
+              <use xlink:href="#icon-insta"></use>
             </svg>
             Инстаграм
           </a>
@@ -166,7 +173,7 @@
         <li class="social__item">
           <a class="social__link" href="#" aria-label="Фэйсбук">
             <svg class="social__icon social__icon--fb" width="10" height="19" role="img">
-              <use xlink:href="img/sprite.svg#icon-fb"></use>
+              <use xlink:href="#icon-fb"></use>
             </svg>
             Фэйсбук
           </a>
@@ -176,7 +183,7 @@
         <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="HTML Academy">HTML
           Academy
           <svg class="copyright__icon" width="27" height="34" role="img">
-            <use xlink:href="img/sprite.svg#icon-academy"></use>
+            <use xlink:href="#icon-academy"></use>
           </svg>
         </a>
       </address>

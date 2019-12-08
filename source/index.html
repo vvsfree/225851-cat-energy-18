@@ -4,10 +4,15 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Кэт энерджи</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body>
+
+  <div style="display:none">
+    <include src="build/img/sprite.svg"></include>
+  </div>
+
   <header class="page-header">
     <div class="wrapper page-header__wrapper">
       <a class="page-header__logo">
@@ -44,9 +49,11 @@
       </header>
       <div class="wrapper promo__wrapper">
         <picture class="promo__picture">
-          <source media="(min-width: 1300px)" srcset="img/index-can-desktop@1x.webp 1x, img/index-can-desktop@2x.webp 2x" type="image/webp">
+          <source media="(min-width: 1300px)"
+            srcset="img/index-can-desktop@1x.webp 1x, img/index-can-desktop@2x.webp 2x" type="image/webp">
           <source media="(min-width: 1300px)" srcset="img/index-can-desktop@1x.png 1x, img/index-can-desktop@2x.png 2x">
-          <source media="(min-width: 768px)" srcset="img/index-can-tablet@1x.webp 1x, img/index-can-tablet@2x.webp 2x" type="image/webp">
+          <source media="(min-width: 768px)" srcset="img/index-can-tablet@1x.webp 1x, img/index-can-tablet@2x.webp 2x"
+            type="image/webp">
           <source media="(min-width: 768px)" srcset="img/index-can-tablet@1x.jpg 1x, img/index-can-tablet@2x.jpg 2x">
           <source srcset="img/index-can-mobile@1x.webp 1x, img/index-can-mobile@2x.webp 2x" type="image/webp">
           <img class="promo__image" src="img/index-can-mobile@1x.png" srcset="img/index-can-mobile@2x.png 2x"
@@ -170,7 +177,7 @@
         <li class="social__item">
           <a class="social__link" href="#" aria-label="Вконтакте">
             <svg class="social__icon social__icon--vk" width="22" height="12" role="img">
-              <use xlink:href="img/sprite.svg#icon-vk"></use>
+              <use xlink:href="#icon-vk"></use>
             </svg>
             Вконтакте
           </a>
@@ -178,7 +185,7 @@
         <li class="social__item">
           <a class="social__link" href="#" aria-label="Инстраграм">
             <svg class="social__icon social__icon--insta" width="16" height="16" role="img">
-              <use xlink:href="img/sprite.svg#icon-insta"></use>
+              <use xlink:href="#icon-insta"></use>
             </svg>
             Инстаграм
           </a>
@@ -186,7 +193,7 @@
         <li class="social__item">
           <a class="social__link" href="#" aria-label="Фэйсбук">
             <svg class="social__icon social__icon--fb" width="10" height="19" role="img">
-              <use xlink:href="img/sprite.svg#icon-fb"></use>
+              <use xlink:href="#icon-fb"></use>
             </svg>
             Фэйсбук
           </a>
@@ -196,7 +203,7 @@
         <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="HTML Academy">HTML
           Academy
           <svg class="copyright__icon" width="27" height="34" role="img">
-            <use xlink:href="img/sprite.svg#icon-academy"></use>
+            <use xlink:href="#icon-academy"></use>
           </svg>
         </a>
       </address>
