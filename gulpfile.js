@@ -14,7 +14,7 @@ var rename = require("gulp-rename");
 var imagemin = require("gulp-imagemin");
 var webp = require("gulp-webp");
 var svgstore = require("gulp-svgstore");
-var minify = require('gulp-minify')
+var minify = require('gulp-minify');
 var posthtml = require("gulp-posthtml");
 var include = require("posthtml-include");
 var htmlmin = require('gulp-htmlmin');
@@ -92,7 +92,7 @@ gulp.task("sprite", function () {
 });
 
 gulp.task("min-js", function () {
-  return gulp.src("source/js/*.js")
+  return gulp.src("source/js/**/*.js")
     .pipe(plumber())
     .pipe(minify({
       ext: {

@@ -3,9 +3,7 @@
   "version": "17.0.0",
   "private": true,
   "description": "Личный проект «Кэт энерджи» от HTML Academy",
-  "dependencies": {
-    "picturefill": "^3.0.3"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "1.x",
     "autoprefixer": "^9.5.1",
