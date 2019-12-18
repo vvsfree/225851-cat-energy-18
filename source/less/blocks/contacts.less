@@ -30,21 +30,14 @@
 
 .contacts__map {
   height: 362px;
-  background-image: url("../../img/bg-map-mobile@1x.png");
-  background-position: center top -36px;
-  background-repeat: no-repeat;
-  background-size: 320px 400px;
+  background-image: url("../../img/map-pin.png"), url("../../img/bg-map-mobile@1x.png");
+  background-position: center 142px, center -36px;
+  background-repeat: no-repeat, no-repeat;
+  background-size: 60.34px auto, 320px 400px;
 
   @media (min-resolution: @retina-dppx) {
-    background-image: url("../../img/bg-map-mobile@2x.png");
+    background-image: url("../../img/map-pin.png"), url("../../img/bg-map-mobile@2x.png");
   }
-}
-
-.contacts__pin {
-  display: block;
-  width: 60.34px;
-  height: auto;
-  transform: translate(110px, 142px);
 }
 
 @media (min-width: @tablet-width) {
@@ -77,18 +70,13 @@
 
   .contacts__map {
     height: 400px;
-    background-image: url("../../img/bg-map-tablet@1x.png");
-    background-position: center top;
-    background-size: 767px 400px;
+    background-image: url("../../img/map-pin.png"), url("../../img/bg-map-tablet@1x.png");
+    background-position: center 150px, center top;
+    background-size: 124px auto, 767px 400px;
 
     @media (min-resolution: @retina-dppx) {
-      background-image: url("../../img/bg-map-tablet@2x.png");
+      background-image: url("../../img/map-pin.png"), url("../../img/bg-map-tablet@2x.png");
     }
-  }
-
-  .contacts__pin {
-    width: 124px;
-    transform: translate(292px, 150px);
   }
 }
 
@@ -96,6 +84,7 @@
   .contacts__wrapper {
     position: relative;
     top: 96px;
+    z-index: 3000;
     justify-content: flex-start;
     align-items: stretch;
     padding-top: 62px;
@@ -110,7 +99,7 @@
   }
 
   .contacts__address {
-    align-items: flex-start;
+    align-items: stretch;
     margin-left: 50px;
     width: 170px;
     text-align: left;
@@ -119,15 +108,12 @@
   .contacts__map {
     margin-top: -201px;
     height: 400px;
-    background-image: url("../../img/bg-map-desktop@1x.png");
-    background-size: 1440px 400px;
+    background-image: url("../../img/map-pin.png"), url("../../img/bg-map-desktop@1x.png");
+    background-position: left calc(50% + 341px) top 149px, center top;
+    background-size: 124px auto, 1440px 400px;
 
     @media (min-resolution: @retina-dppx) {
-      background-image: url("../../img/bg-map-desktop@2x.png");
+      background-image: url("../../img/map-pin.png"), url("../../img/bg-map-desktop@2x.png");
     }
-  }
-
-  .contacts__pin {
-    transform: translate(888px, 149px);
   }
 }

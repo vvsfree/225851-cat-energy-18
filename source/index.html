@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Кэт энерджи</title>
   <link rel="stylesheet" href="css/style.min.css">
 </head>
@@ -23,12 +24,12 @@
             alt="Логотип Cat Energy">
         </picture>
       </a>
-      <button class="page-header__nav-toggle page-header__nav-toggle--open" type="button">
+      <button class="page-header__nav-toggle page-header__nav-toggle--open page-header__nav-toggle--nojs" type="button">
         Открыть|Закрыть меню сайта
       </button>
     </div>
     <nav class="main-nav">
-      <ul class="menu-list menu-list--white">
+      <ul class="menu-list menu-list--white menu-list--nojs">
         <li class="menu-list__item"><a class="menu-list__link menu-list__link--active">Главная</a></li>
         <li class="menu-list__item"><a class="menu-list__link" href="catalog.html">Каталог
             продукции</a></li>
@@ -158,11 +159,7 @@
           <span class="contacts__city">Санкт-Петербург</span>
         </p>
       </div>
-      <div class="contacts__map">
-        <div class="wrapper">
-          <img class="contacts__pin" src="img/map-pin.png" width="124" height="106" alt="Указатель на карте">
-        </div>
-      </div>
+      <div class="contacts__map" id="map"></div>
     </section>
   </main>
 
@@ -209,6 +206,9 @@
       </address>
     </div>
   </footer>
+  <script src="js/vendor/picturefill.min.js" async></script>
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=5ee75d19-8055-4fc3-948a-d62a22a76a86" type="text/javascript"></script>
+  <script src="js/map.min.js"></script>
 </body>
 
 </html>
