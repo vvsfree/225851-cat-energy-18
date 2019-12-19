@@ -26,7 +26,7 @@ function init() {
       // Необходимо указать данный тип макета.
       iconLayout: "default#image",
       // Своё изображение иконки метки.
-      iconImageHref: "../img/map-pin.png",
+      iconImageHref: "img/map-pin.png",
       // Размеры метки.
       iconImageSize: imageSizeSmall,
       // Смещение левого верхнего угла иконки относительно её "ножки" (точки привязки).

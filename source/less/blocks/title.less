@@ -24,6 +24,10 @@
     &::before {
       margin-right: ~"calc((100% - @{mobile-wrapper-width}) / 2)";
     }
+
+    &::after {
+      width: ~"calc((100% - @{mobile-wrapper-width}) / 2)";
+    }
   }
 }
 
@@ -31,6 +35,10 @@
   .title {
     &::before {
       margin-right: 20px;
+      width: ~"calc((100% - @{mobile-width}) / 2)";
+    }
+
+    &::after {
       width: ~"calc((100% - @{mobile-width}) / 2)";
     }
   }
@@ -50,6 +58,7 @@
 
     &::after {
       margin-left: 44px;
+      width: ~"calc((100% - @{tablet-wrapper-width}) / 2)";
     }
   }
 }
@@ -63,6 +72,7 @@
 
     &::after {
       margin-left: 40px;
+      width: ~"calc((100% - @{desktop-width}) / 2)";
     }
   }
 }

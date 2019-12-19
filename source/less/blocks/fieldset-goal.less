@@ -50,6 +50,15 @@
   }
 }
 
+.fieldset-goal__radio-btn:disabled + .fieldset-goal__label {
+  opacity: 0.3;
+
+  &::before {
+    border: 1px solid #bababa;
+    background-color: #cdcdcd;
+  }
+}
+
 @media (min-width: @tablet-width) {
   .fieldset-goal {
     padding: 0;
