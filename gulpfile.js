@@ -25,6 +25,7 @@ gulp.task("clean", function () {
 
 gulp.task("copy", function () {
   return gulp.src([
+    "source/favicon.ico",
     "source/fonts/**/*.{woff,woff2}"
   ], {
     base: "source"

@@ -117,24 +117,21 @@
 
 @media (min-width: @tablet-width) {
   .slider {
-    background:
-      linear-gradient(to bottom, #ffffff @tablet-slider-gradient-border, transparent @tablet-slider-gradient-border),
-      linear-gradient(to right, #f2f2f2 50%, #eaeaea 50%);
+    background: linear-gradient(to bottom, #ffffff @tablet-slider-gradient-border, #f2f2f2 @tablet-slider-gradient-border);
   }
 
   .slider__wrapper {
-    margin: 0 auto;
     min-height: 630px;
-    width: @tablet-wrapper-width;
   }
 
   .slider__slide {
-    background-position: left 15px top, 0 0;
+    background-position: calc(50% + 8px) top, 0 0;
     background-size: 690px 517px, auto 100%;
   }
 
   .slider__slide--before {
-    width: @tablet-wrapper-width / 2;
+    background-position: right -352px top, 0 0;
+    width: 50%;
     .slide-bg-gradient-image("before-tablet@1x.png", @tablet-slider-gradient-border, #f2f2f2);
 
     @media (min-resolution: @retina-dppx) {
@@ -230,20 +227,21 @@
 
   .slider__radio {
     &--before:checked ~ .slider__slide--before {
-      width: 551px;
+      width: 100%;
+      background-position: 50% top, 0 0;
     }
 
     &--after:checked ~ .slider__slide--before {
-      width: 157px;
+      width: 0;
     }
 
     &--before:checked ~ .slider__controls .slider__thumb {
-      left: auto;
-      right: 0;
+      left: 0;
     }
 
     &--after:checked ~ .slider__controls .slider__thumb {
-      left: 0;
+      left: auto;
+      right: 0;
     }
   }
 }
@@ -283,7 +281,8 @@
   .slider__controls {
     left: 39px;
     bottom: 69px;
-    width: 100%;
+    margin: 0;
+    width: 650px;
   }
 
   .slider__control-layout {
@@ -292,11 +291,12 @@
 
   .slider__radio {
     &--before:checked ~ .slider__slide--before {
-      width: 560px;
+      width: 100%;
+      background-position: 0 0;
     }
 
     &--after:checked ~ .slider__slide--before {
-      width: 167px;
+      width: 0;
     }
   }
 }

@@ -51,12 +51,10 @@
 @media (min-width: @desktop-width) {
   .example {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: stretch;
     border: none;
-    background:
-      linear-gradient(to bottom, #ffffff @desktop-slider-gradient-border, transparent @desktop-slider-gradient-border),
-      linear-gradient(to right, #f2f2f2 50%, #eaeaea 50%);
+    background: linear-gradient(to bottom, #ffffff @desktop-slider-gradient-border, #f2f2f2 @desktop-slider-gradient-border);
   }
 
   .example__wrapper {
@@ -76,6 +74,6 @@
 
   .example__slider {
     margin-top: 0;
-    width: 650px;
+    width: calc(50% + 40px);
   }
 }

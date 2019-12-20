@@ -34,10 +34,7 @@
   text-transform: uppercase;
 }
 
-.form__text-field,
-.form__number-field,
-.form__email-field,
-.form__phone-field {
+.form__field {
   flex-grow: 1;
   padding: 0;
   padding-bottom: 2px;
@@ -50,26 +47,31 @@
 
   &:hover {
     border: 1px solid #cdcdcd;
+
+    & + .form__email-icon,
+    & + .form__phone-icon {
+      fill: #000000;
+    }
   }
 
   &:focus {
     outline: none;
     border: 2px solid #444444;
+
+    & + .form__email-icon,
+    & + .form__phone-icon {
+      fill: @main-green-color;
+    }
   }
 
-  &:invalid {
+  &--invalid {
     border: 2px solid #ff8282;
+
+    & + .form__email-icon,
+    & + .form__phone-icon {
+      fill: #ff8282;
+    }
   }
-}
-
-.form__email-field:focus + .form__email-icon,
-.form__phone-field:focus + .form__phone-icon {
-  fill: @main-green-color;
-}
-
-.form__email-field:invalid + .form__email-icon,
-.form__phone-field:invalid + .form__phone-icon {
-  fill: #ff8282;
 }
 
 .form__fieldset-identity {
@@ -120,10 +122,7 @@
     line-height: 1;
   }
 
-  .form__text-field,
-  .form__number-field,
-  .form__email-field,
-  .form__phone-field {
+  .form__field {
     padding-bottom: 2px;
     padding-left: 18px;
     height: 52px;
